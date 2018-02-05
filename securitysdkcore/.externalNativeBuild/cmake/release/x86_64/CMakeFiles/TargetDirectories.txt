@@ -1,0 +1,3 @@
+/home/plldzy/Downloads/SecuritySDK-master/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/rebuild_cache.dir
+/home/plldzy/Downloads/SecuritySDK-master/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/edit_cache.dir
+/home/plldzy/Downloads/SecuritySDK-master/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/native-lib.dir

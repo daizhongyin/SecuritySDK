@@ -1,0 +1,59 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+
+   <!--<head>-->
+      <!--<meta charset="utf-8">-->
+      <!--<title>Carson_Ho</title>-->
+
+<!--// JS代码-->
+     <!--<script>-->
+<!--// Android需要调用的方法-->
+   <!--function callJS(){-->
+      <!--alert("Android调用了JS的callJS方法");-->
+   <!--}-->
+<!--</script>-->
+
+   <!--</head>-->
+
+<!--</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Carson</title>
+    <script>
+         function callAndroid(){
+        // 由于对象映射，所以调用test对象等于调用Android映射的对象
+            //safeobj.handleMsgAndDispatch("js调用了android中的hello方法","heheh","setValuesJson");
+            //safeobj.hello("call android");
+            safeobj.getTest();
+         }
+        function setValuesJson(param)
+        {
+            //alert(param);//param是java传过来的值，即"hello world".
+            var result = "传回Java的string";
+            //window.stub.jsMethod(result);
+            safeobj.test(result);
+        }
+     </script>
+
+    <!--<script>-->
+        <!--// Android需要调用的方法-->
+   <!--function callJS(){-->
+        <!--callAndroid1();-->
+      <!--alert("Android调用了JS的callJS方法");-->
+
+   <!--}-->
+   <!--function callAndroid1(){-->
+        <!--// 由于对象映射，所以调用test对象等于调用Android映射的对象-->
+            <!--safeobj.hello1("js调用了android中的hello方法22222222");-->
+         <!--}-->
+
+<!--</script>-->
+</head>
+<body>
+//点击按钮则调用callAndroid函数
+<button type="button" id="button1" onclick="callAndroid()">123123123</button>
+</body>
+</html>

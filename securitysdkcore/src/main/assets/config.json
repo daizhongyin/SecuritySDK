@@ -1,0 +1,53 @@
+{
+  "intentUriList": [
+    {
+      "actionStringList": [
+        "com.action.view",
+        "com.action.browser"
+      ],
+      "type": 1,
+      "uriHostList": [
+        "baidu.com"
+      ],
+      "uriParaMaps": {
+        "keywords": "file"
+      }
+    }
+  ],
+  "interceptPluginInvokeList": [              //需要禁止的插件调用(plugin_name "插件名, method_name "方法名"，method_arg “方法参数”，targetclass “目标类名”, intent_data "Intent中需要过滤的内容")
+    {
+      "method": {
+        "methodNmae": "sendsmsbydefault",
+        "type": 0
+      },
+      "pluginName": "com.sendsms.plugin",
+      "type": 0,
+      "uriScheme": {
+        "$ref": "$.intentUriList[0]"
+      }
+    }
+  ],
+  "timeout": 100000,                  // 更新间隔，SDK提供修改接口，业务方根据策略，分批设置更新时间，来缓解服务器压力.默认是单位是秒.
+  "updateAndDownloadUrlWhiteList": [
+    "safedownload.com"
+  ],
+  "version": "1.0",                   //当前配置信息的版本
+  "webviewConfig": {
+    "methodList": [
+      {
+        "methodArgMap": {
+          "1": "baidu.com"
+        },
+        "methodNmae": "openurl",
+        "type": 0
+      }
+    ],
+    "urlBlackList": [
+      "test.com",
+      "attack.com"
+    ],
+    "urlWhiteList": [
+      "baidu.com"
+    ]
+  }
+}
