@@ -192,6 +192,12 @@ Project_BINARY_DIR:STATIC=C:/Users/Lin/Desktop/SecuritySDK/SecuritySDK/securitys
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=C:/Users/Lin/Desktop/SecuritySDK/SecuritySDK/securitysdkcore
 
+//Path to a library.
+log-lib:FILEPATH=C:/Users/Lin/AppData/Local/Android/Sdk/ndk-bundle/platforms/android-18/arch-x86/usr/lib/liblog.so
+
+//Dependencies for the target
+native-lib_LIB_DEPENDS:STATIC=general;C:/Users/Lin/AppData/Local/Android/Sdk/ndk-bundle/platforms/android-18/arch-x86/usr/lib/liblog.so;
+
 
 ########################
 # INTERNAL cache entries
