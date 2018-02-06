@@ -34,7 +34,7 @@ include rules.ninja
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/plldzy/Downloads/SecuritySDK-master/securitysdkcore/.externalNativeBuild/cmake/release/mips && /home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/cmake -H/home/plldzy/Downloads/SecuritySDK-master/securitysdkcore -B/home/plldzy/Downloads/SecuritySDK-master/securitysdkcore/.externalNativeBuild/cmake/release/mips
+  COMMAND = cd /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/release/mips && /home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/cmake -H/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore -B/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/release/mips
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -44,7 +44,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/plldzy/Downloads/SecuritySDK-master/securitysdkcore/.externalNativeBuild/cmake/release/mips && /home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/release/mips && /home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 build edit_cache: phony CMakeFiles/edit_cache.util
@@ -56,7 +56,7 @@ build CMakeFiles/native-lib.dir/src/main/cpp/InjectDetected.cpp.o: CXX_COMPILER_
   DEP_FILE = CMakeFiles/native-lib.dir/src/main/cpp/InjectDetected.cpp.o.d
   FLAGS = -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mips32 -Wa,--noexecstack -Wformat -Werror=format-security  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mips32 -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG -O2 -DNDEBUG  -fPIC
   INCLUDES = -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
-  IN_ABS = /home/plldzy/Downloads/SecuritySDK-master/securitysdkcore/src/main/cpp/InjectDetected.cpp
+  IN_ABS = /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/src/main/cpp/InjectDetected.cpp
   OBJECT_DIR = CMakeFiles/native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles/native-lib.dir/src/main/cpp
 build CMakeFiles/native-lib.dir/src/main/cpp/getSign.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/getSign.cpp
@@ -64,7 +64,7 @@ build CMakeFiles/native-lib.dir/src/main/cpp/getSign.cpp.o: CXX_COMPILER__native
   DEP_FILE = CMakeFiles/native-lib.dir/src/main/cpp/getSign.cpp.o.d
   FLAGS = -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mips32 -Wa,--noexecstack -Wformat -Werror=format-security  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mips32 -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG -O2 -DNDEBUG  -fPIC
   INCLUDES = -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
-  IN_ABS = /home/plldzy/Downloads/SecuritySDK-master/securitysdkcore/src/main/cpp/getSign.cpp
+  IN_ABS = /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/src/main/cpp/getSign.cpp
   OBJECT_DIR = CMakeFiles/native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles/native-lib.dir/src/main/cpp
 build CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/native-lib.cpp
@@ -72,7 +72,7 @@ build CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o: CXX_COMPILER__nat
   DEP_FILE = CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o.d
   FLAGS = -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mips32 -Wa,--noexecstack -Wformat -Werror=format-security  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mips32 -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG -O2 -DNDEBUG  -fPIC
   INCLUDES = -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
-  IN_ABS = /home/plldzy/Downloads/SecuritySDK-master/securitysdkcore/src/main/cpp/native-lib.cpp
+  IN_ABS = /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/src/main/cpp/native-lib.cpp
   OBJECT_DIR = CMakeFiles/native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles/native-lib.dir/src/main/cpp
 build CMakeFiles/native-lib.dir/src/main/cpp/BasicInfor.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/BasicInfor.cpp
@@ -80,7 +80,7 @@ build CMakeFiles/native-lib.dir/src/main/cpp/BasicInfor.cpp.o: CXX_COMPILER__nat
   DEP_FILE = CMakeFiles/native-lib.dir/src/main/cpp/BasicInfor.cpp.o.d
   FLAGS = -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mips32 -Wa,--noexecstack -Wformat -Werror=format-security  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mips32 -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG -O2 -DNDEBUG  -fPIC
   INCLUDES = -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
-  IN_ABS = /home/plldzy/Downloads/SecuritySDK-master/securitysdkcore/src/main/cpp/BasicInfor.cpp
+  IN_ABS = /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/src/main/cpp/BasicInfor.cpp
   OBJECT_DIR = CMakeFiles/native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles/native-lib.dir/src/main/cpp
 build CMakeFiles/native-lib.dir/src/main/cpp/Util.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/Util.cpp
@@ -88,7 +88,7 @@ build CMakeFiles/native-lib.dir/src/main/cpp/Util.cpp.o: CXX_COMPILER__native-li
   DEP_FILE = CMakeFiles/native-lib.dir/src/main/cpp/Util.cpp.o.d
   FLAGS = -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mips32 -Wa,--noexecstack -Wformat -Werror=format-security  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mips32 -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG -O2 -DNDEBUG  -fPIC
   INCLUDES = -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
-  IN_ABS = /home/plldzy/Downloads/SecuritySDK-master/securitysdkcore/src/main/cpp/Util.cpp
+  IN_ABS = /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/src/main/cpp/Util.cpp
   OBJECT_DIR = CMakeFiles/native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles/native-lib.dir/src/main/cpp
 build CMakeFiles/native-lib.dir/src/main/cpp/SimulatorDetected.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/SimulatorDetected.cpp
@@ -96,7 +96,7 @@ build CMakeFiles/native-lib.dir/src/main/cpp/SimulatorDetected.cpp.o: CXX_COMPIL
   DEP_FILE = CMakeFiles/native-lib.dir/src/main/cpp/SimulatorDetected.cpp.o.d
   FLAGS = -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mips32 -Wa,--noexecstack -Wformat -Werror=format-security  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mips32 -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG -O2 -DNDEBUG  -fPIC
   INCLUDES = -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
-  IN_ABS = /home/plldzy/Downloads/SecuritySDK-master/securitysdkcore/src/main/cpp/SimulatorDetected.cpp
+  IN_ABS = /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/src/main/cpp/SimulatorDetected.cpp
   OBJECT_DIR = CMakeFiles/native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles/native-lib.dir/src/main/cpp
 

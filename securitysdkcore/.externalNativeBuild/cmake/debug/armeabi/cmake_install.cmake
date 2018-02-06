@@ -1,4 +1,4 @@
-# Install script for directory: /home/plldzy/Downloads/SecuritySDK-master/securitysdkcore
+# Install script for directory: /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/plldzy/Downloads/SecuritySDK-master/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

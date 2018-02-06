@@ -1,10 +1,10 @@
 Executable : /home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/cmake
 arguments : 
--H/home/plldzy/Downloads/SecuritySDK-master/securitysdkcore
--B/home/plldzy/Downloads/SecuritySDK-master/securitysdkcore/.externalNativeBuild/cmake/release/mips
+-H/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore
+-B/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/release/mips
 -DANDROID_ABI=mips
 -DANDROID_PLATFORM=android-18
--DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/home/plldzy/Downloads/SecuritySDK-master/securitysdkcore/build/intermediates/cmake/release/obj/mips
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/build/intermediates/cmake/release/obj/mips
 -DCMAKE_BUILD_TYPE=Release
 -DANDROID_NDK=/home/plldzy/soft/android-ndk-r14b
 -DCMAKE_CXX_FLAGS=

@@ -1,0 +1,71 @@
+
+{
+	"buildFiles" : 
+	[
+		"/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/CMakeLists.txt"
+	],
+	"cleanCommands" : 
+	[
+		"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/cmake --build /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"native-lib-Debug-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "native-lib",
+			"buildCommand" : "/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/cmake --build /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a --target native-lib",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/home/plldzy/soft/android-ndk-r14b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-arm64  -Dnative_lib_EXPORTS -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security   -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/src/main/cpp/InjectDetected.cpp",
+					"workingDirectory" : "/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/home/plldzy/soft/android-ndk-r14b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-arm64  -Dnative_lib_EXPORTS -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security   -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/src/main/cpp/getSign.cpp",
+					"workingDirectory" : "/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/home/plldzy/soft/android-ndk-r14b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-arm64  -Dnative_lib_EXPORTS -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security   -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/home/plldzy/soft/android-ndk-r14b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-arm64  -Dnative_lib_EXPORTS -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security   -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/src/main/cpp/BasicInfor.cpp",
+					"workingDirectory" : "/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/home/plldzy/soft/android-ndk-r14b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-arm64  -Dnative_lib_EXPORTS -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security   -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/src/main/cpp/Util.cpp",
+					"workingDirectory" : "/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/home/plldzy/soft/android-ndk-r14b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-arm64  -Dnative_lib_EXPORTS -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include -isystem /home/plldzy/soft/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security   -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/src/main/cpp/SimulatorDetected.cpp",
+					"workingDirectory" : "/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a"
+				}
+			],
+			"output" : "/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so",
+			"toolchain" : "8107765352087228431"
+		}
+	},
+	"toolchains" : 
+	{
+		"8107765352087228431" : 
+		{
+			"cCompilerExecutable" : "/home/plldzy/soft/android-ndk-r14b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/home/plldzy/soft/android-ndk-r14b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
+		}
+	}
+}

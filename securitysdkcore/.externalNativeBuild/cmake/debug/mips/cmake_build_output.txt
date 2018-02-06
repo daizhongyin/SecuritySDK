@@ -12,4 +12,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/plldzy/Downloads/SecuritySDK-master/securitysdkcore/.externalNativeBuild/cmake/debug/mips
+-- Build files have been written to: /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/mips
