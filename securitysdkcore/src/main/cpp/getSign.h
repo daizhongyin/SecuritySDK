@@ -22,6 +22,7 @@
 
 extern "C"
 char* getAppSignSha1(JNIEnv *env, jobject context_object);
+char* getAppSignSha1(JNIEnv *env, jobject context_object,jstring pkgname);
 extern "C"
 jboolean checkValidity(JNIEnv *env, char *Appsha1);
 

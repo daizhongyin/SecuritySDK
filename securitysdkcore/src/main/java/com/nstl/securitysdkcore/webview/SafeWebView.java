@@ -2,29 +2,19 @@ package com.nstl.securitysdkcore.webview;
 
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.net.http.SslError;
 import android.os.Build;
+import android.text.TextUtils;
 import android.util.AttributeSet;
-import android.view.KeyEvent;
 import android.webkit.SslErrorHandler;
-import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import com.alibaba.fastjson.JSON;
 import com.github.lzyzsd.jsbridge.BridgeHandler;
 import com.github.lzyzsd.jsbridge.BridgeWebView;
 import com.github.lzyzsd.jsbridge.BridgeWebViewClient;
 import com.github.lzyzsd.jsbridge.CallBackFunction;
-import com.github.lzyzsd.jsbridge.DefaultHandler;
-import com.nstl.securitysdkcore.config.ConfigFileToObject;
-import com.nstl.securitysdkcore.config.InterceptMethod;
-import com.nstl.securitysdkcore.config.WebviewConfig;
-
-import java.util.List;
-import java.util.Map;
 
 /**
  * Created by Lin on 2017/12/14.
@@ -32,91 +22,18 @@ import java.util.Map;
 
 public class SafeWebView extends BridgeWebView implements BridgeHandler{
 
-    //private Map<String, String> methodMap = null;                   //禁止JS和本地代码进行交互的方法名和相关参数
     private IMethodInvokeInterface invokeInterface = null;          //业务方根据JS传递进来的参数，进行实际处理的类
-    private WebviewConfig webViewConfig = null;
     private WebSettings settings = null;
     private WebViewClient client = null;
 
-    /**
-     * 继承的构造方法
-     * @param context
-     */
-    public SafeWebView(Context context){
-        super(context);
-        init(context);
-    }
-
-    /**
-     *继承的构造方法
-     * @param context
-     * @param attrs
-     * @param defStyle
-     */
-    public SafeWebView(Context context, AttributeSet attrs, int defStyle){
-        super(context, attrs, defStyle);
-        init(context);
-    }
-
-    /**
-     * 继承的构造方法
-     * @param context
-     * @param attrs
-     */
     public SafeWebView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(context);
     }
-
-    /**
-     * 自身的构造方法
-     * @param context
-     * @param miInterface
-     */
-    public SafeWebView(Context context, IMethodInvokeInterface miInterface) {
+    public SafeWebView(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+    }
+    public SafeWebView(Context context) {
         super(context);
-        settings = this.getSettings();
-        settings.setJavaScriptCanOpenWindowsAutomatically(true);
-        //this.methodMap = methodMap;
-        this.invokeInterface = miInterface;
-        client = new BridgeWebViewClient(this){
-            @Override
-            public void onPageStarted(WebView view, String url, Bitmap favicon) {
-                super.onPageStarted(view, url, favicon);
-            }
-
-            @Override
-            public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
-                super.onReceivedSslError(view, handler, error);
-                //停止对错误的https证书的继续加载
-                handler.cancel();
-            }
-
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
-                return super.shouldOverrideUrlLoading(view, request);
-            }
-            @Override
-            public void onScaleChanged(WebView view, float oldScale, float newScale) {
-                super.onScaleChanged(view, oldScale, newScale);
-            }
-
-            @Override
-            public void onUnhandledKeyEvent(WebView view, KeyEvent event) {
-                super.onUnhandledKeyEvent(view, event);
-            }
-
-            @Override
-            public boolean shouldOverrideKeyEvent(WebView view, KeyEvent event) {
-                return super.shouldOverrideKeyEvent(view, event);
-            }
-            @Override
-            public void doUpdateVisitedHistory(WebView view, String url, boolean isReload) {
-                super.doUpdateVisitedHistory(view, url, isReload);
-            }
-        };
-        this.setDefaultHandler(new DefaultHandler());
-        init(context);
     }
     /**
      * 客户端调用SafeWebView后，传递相关参数进行初始化
@@ -124,15 +41,19 @@ public class SafeWebView extends BridgeWebView implements BridgeHandler{
      * @param
      * @return void
      */
-    public void init(Context context){
-        //从配置文件中读取webview的配置策略：url黑、白名单，需要阻止JS执行的方法名和方法参数。
-        //反序列化到webviewConfigbean
-        this.webViewConfig = ConfigFileToObject.getSecuritySDKConfig(context).getWebviewConfig();
+    public void init(Context context, IMethodInvokeInterface miInterface){
+        settings = this.getSettings();
+        settings.setJavaScriptCanOpenWindowsAutomatically(true);
+        this.invokeInterface = miInterface;
+        client = new BridgeWebViewClient(this){
+            @Override
+            public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
+                super.onReceivedSslError(view, handler, error);
+                //停止对错误的https证书的继续加载
+                handler.cancel();
+            }
+        };
 
-        if(Build.VERSION.SDK_INT >=16){
-            settings.setAllowFileAccessFromFileURLs(true);
-            settings.setAllowFileAccessFromFileURLs(true);
-        }
         if(Build.VERSION.SDK_INT <= 16){
             removeJavascriptInterface("searchBoxJavaBridge_");
             removeJavascriptInterface("accessibility");
@@ -140,7 +61,6 @@ public class SafeWebView extends BridgeWebView implements BridgeHandler{
         }
         this.setWebViewClient(client);
     }
-
     /**
      * 重写BridgeWebView 的 java向js注册对象的方法，里面主要是进行过滤
      * @param handlerName
@@ -154,70 +74,37 @@ public class SafeWebView extends BridgeWebView implements BridgeHandler{
      */
     @Override
     public void loadUrl(String url) {
-        if( verifyUrl(url) < 0){
+        //this.loadUrl = url;
+        if( verifyUrl(url.trim()) < 0){
             return;
         }
         super.loadUrl(url);
     }
     /**
-     * //判断要加载的Url是否在白名单或黑名单内，只加载可信域的https
-     * ? 需要增加正则匹配问题
-     * @param url
-     * @return
-     *      白名单返回1
-     *      黑名单返回-1
-     *      不在名单内，根据url为http链接返回3
-     *                        https链接返回2
+     * 判断当前url是否合法，业务方可以根据业务场景，增加url的白名单匹配过程；如禁止webview加载非白名单中的url
      */
     private int verifyUrl(String url){
-        List<String> urlWhiteList = this.webViewConfig.getUrlWhiteList();
-        List<String> urlBlackList = this.webViewConfig.getUrlBlackList();
-        for( String urlWhiteStr : urlWhiteList){
-            if( url.endsWith(urlWhiteStr) ){
-                return 1;
-            }
+        //file协议只允许assert相关目录下的html文件
+        if(fileUrlISSafe(url)){
+            enableFileCrossAccess();
+        }else{
+            disableFileCrossAccess();
         }
-        for (String urlBlackStr : urlBlackList){
-            if( url.endsWith(urlBlackStr)){
-                return -1;
-            }
-        }
-        if(url.startsWith("https")){
-            return 2;
-        }
-        return 3;
+        return 1;
+    }
+    //关闭了file协议的跨域访问，防止webview加载外部file文件读取应用内的私有文件，造成信息泄露
+    private void disableFileCrossAccess(){
+        settings.setAllowFileAccess(false);
+        settings.setAllowFileAccessFromFileURLs(false);
+        settings.setAllowUniversalAccessFromFileURLs(false);
+    }
+    //开启file域访问能力,确保加载file协议文件，是在assert目录下，或者信任的私有目录下
+    private void enableFileCrossAccess(){
+        settings.setAllowFileAccess(true);
+        settings.setAllowFileAccessFromFileURLs(true);
+        settings.setAllowUniversalAccessFromFileURLs(true);
     }
 
-    /**
-     * //校验JS此次调用的方法名和参数，根据WebViewConfigBean相关变量进行判断
-     * 从配置文件中读取数据判断是否允许加载
-     * @param methodName
-     * @param argJson
-     * @return
-     */
-    private boolean verifyMethodNameOrArg(String methodName,Map<Integer,String> argJson){
-        List<InterceptMethod> methodList = this.webViewConfig.getMethodList();
-        for (InterceptMethod interceptMethod : methodList){
-            if( interceptMethod.getMethodNmae().equals(methodName)){
-                if( interceptMethod.getType() > 0){
-                    return true;
-                }
-                if( interceptMethod.getType() == 0){
-                    return false;
-                }
-                if( interceptMethod.getType() == -1){
-                    //取出参数的位置
-                    Map<Integer,String> map = interceptMethod.getMethodArgMap();
-                    for( Map.Entry<Integer, String> entry : map.entrySet()){
-                        if(argJson.get(entry.getKey()).equals(entry.getValue())){
-                            return false;
-                        }
-                    }
-                }
-            }
-        }
-        return false;
-    }
     /**
      * 返回到js的数据
      * @param data
@@ -225,19 +112,47 @@ public class SafeWebView extends BridgeWebView implements BridgeHandler{
      */
     @Override
     public void handler(String data, CallBackFunction function) {
+        //Log.i(TAG, "-----handler--------" + this.getUrl());
         String resultJson = "error";
-        //对data进行反序列化，格式为method name , map
-        MethodAndArgJson methodAndArgJson = JSON.parseObject( data, MethodAndArgJson.class);
-        if( methodAndArgJson == null){
-            function.onCallBack(resultJson);
-        }
-        String methodName = methodAndArgJson.getMethodName();
-        Map<Integer,String> argJson = methodAndArgJson.getArgMapJson();
-        //调用verify方法验证是否允许调用
-        if(verifyMethodNameOrArg(methodName,argJson)){
+        //获得当前加载的url，如果url不是本地目录的文件，或者是百度域下的url，则不进行handle的处理【禁止JS和java本地代码进行交互，从而调用危险接口】
+        if(this.getUrl() != null &&(urlISSafe(this.getUrl().trim()))){
             //执行实现的接口
-            resultJson = invokeInterface.dispatch(methodName,argJson);
+            resultJson = invokeInterface.dispatch(data);
+            function.onCallBack(resultJson);
         }
         function.onCallBack(resultJson);
     }
+
+    /**
+     * 判断url是否安全:http开头的协议，只允许加载百度域下的url，file协议，只允许加载当前应用资源目录下的html文件
+     * @param urlStr
+     * @return
+     */
+    private boolean urlISSafe(String urlStr){
+        boolean flag = false;
+        if(urlStr.startsWith("http") || urlStr.startsWith("https")){
+            //匹配url是否是百度域下或者可信域
+            flag = urlStr.matches("((http://)|(https://)){0,1}(/w/d)*.baidu.com");
+        }
+        flag = fileUrlISSafe(urlStr);
+        return  flag;
+    }
+    //file协议的url是合法的判断
+    private boolean fileUrlISSafe(String fileUrl){
+        boolean flag = false;
+        if(fileUrl.startsWith("file")){
+            //file路径截取
+            String urlPath = fileUrl.substring(fileUrl.indexOf("file:")+ 7);
+            //可信的file协议的目录文件
+            if(!TextUtils.isEmpty(((CharSequence)urlPath)) && !urlPath.contains("..") && !urlPath.contains("\\") && !urlPath.contains("%")) {
+                if(urlPath.startsWith("/android_asset") || urlPath.startsWith("/android_res")) {
+                    flag = true;
+                }
+            }
+        }
+
+        return flag;
+    }
+
+
 }

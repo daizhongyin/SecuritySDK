@@ -41,4 +41,10 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/InjectDetected_id"/>
 
+    <com.nstl.securitysdkcore.webview.SafeWebView
+        android:id="@+id/my_webview"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+    </com.nstl.securitysdkcore.webview.SafeWebView>
+
 </RelativeLayout>

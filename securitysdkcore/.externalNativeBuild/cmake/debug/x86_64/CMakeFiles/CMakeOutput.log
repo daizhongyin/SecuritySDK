@@ -1,19 +1,19 @@
 The target system is: Android - 21 - x86_64
-The host system is: Linux - 4.13.0-32-generic - x86_64
+The host system is: Linux - 4.13.0-36-generic - x86_64
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_b0ea4"
-[1/2] Building C object CMakeFiles/cmTC_b0ea4.dir/testCCompiler.c.o
-[2/2] Linking C executable cmTC_b0ea4
+Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_06ac2"
+[1/2] Building C object CMakeFiles/cmTC_06ac2.dir/testCCompiler.c.o
+[2/2] Linking C executable cmTC_06ac2
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_1a069"
-[1/2] Building C object CMakeFiles/cmTC_1a069.dir/CMakeCCompilerABI.c.o
-[2/2] Linking C executable cmTC_1a069
+Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_3431f"
+[1/2] Building C object CMakeFiles/cmTC_3431f.dir/CMakeCCompilerABI.c.o
+[2/2] Linking C executable cmTC_3431f
 Android clang version 3.8.275480  (based on LLVM 3.8.275480)
 Target: x86_64-none-linux-android
 Thread model: posix
@@ -24,16 +24,16 @@ Candidate multilib: .;@m64
 Candidate multilib: 32;@m32
 Candidate multilib: x32;@mx32
 Selected multilib: .;@m64
- "/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/bin/ld" --sysroot=/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64 -pie -z relro --eh-frame-hdr -m elf_x86_64 -dynamic-linker /system/bin/linker64 -o cmTC_1a069 /home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64/crtbegin_dynamic.o -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/lib/../lib64 -L/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64 -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/lib -L/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_1a069.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl /home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64/crtend_android.o
+ "/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/bin/ld" --sysroot=/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64 -pie -z relro --eh-frame-hdr -m elf_x86_64 -dynamic-linker /system/bin/linker64 -o cmTC_3431f /home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64/crtbegin_dynamic.o -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/lib/../lib64 -L/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64 -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/lib -L/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_3431f.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl /home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64/crtend_android.o
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(x86_64-linux-android-ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_1a069"]
-  ignore line: [[1/2] Building C object CMakeFiles/cmTC_1a069.dir/CMakeCCompilerABI.c.o]
-  ignore line: [[2/2] Linking C executable cmTC_1a069]
+  ignore line: [Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_3431f"]
+  ignore line: [[1/2] Building C object CMakeFiles/cmTC_3431f.dir/CMakeCCompilerABI.c.o]
+  ignore line: [[2/2] Linking C executable cmTC_3431f]
   ignore line: [Android clang version 3.8.275480  (based on LLVM 3.8.275480)]
   ignore line: [Target: x86_64-none-linux-android]
   ignore line: [Thread model: posix]
@@ -48,7 +48,7 @@ Parsed C implicit link information from above output:
   ignore line: [@mx32]
   ignore line: [Selected multilib: .]
   ignore line: [@m64]
-  link line: [ "/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/bin/ld" --sysroot=/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64 -pie -z relro --eh-frame-hdr -m elf_x86_64 -dynamic-linker /system/bin/linker64 -o cmTC_1a069 /home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64/crtbegin_dynamic.o -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/lib/../lib64 -L/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64 -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/lib -L/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_1a069.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl /home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64/crtend_android.o]
+  link line: [ "/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/bin/ld" --sysroot=/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64 -pie -z relro --eh-frame-hdr -m elf_x86_64 -dynamic-linker /system/bin/linker64 -o cmTC_3431f /home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64/crtbegin_dynamic.o -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/lib/../lib64 -L/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64 -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/lib -L/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_3431f.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl /home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64/crtend_android.o]
     arg [/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/bin/ld] ==> ignore
     arg [--sysroot=/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64] ==> ignore
     arg [-pie] ==> ignore
@@ -59,7 +59,7 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/system/bin/linker64] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_1a069] ==> ignore
+    arg [cmTC_3431f] ==> ignore
     arg [/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64/crtbegin_dynamic.o] ==> ignore
     arg [-L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x] ==> dir [/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x]
     arg [-L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/lib/../lib64] ==> dir [/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/lib/../lib64]
@@ -84,7 +84,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [--gc-sections] ==> ignore
     arg [-znocopyreloc] ==> ignore
-    arg [CMakeFiles/cmTC_1a069.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_3431f.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [-ldl] ==> lib [dl]
     arg [-lc] ==> lib [c]
@@ -108,9 +108,9 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_5f2d2"
-[1/2] Building C object CMakeFiles/cmTC_5f2d2.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_5f2d2
+Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_e43ca"
+[1/2] Building C object CMakeFiles/cmTC_e43ca.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_e43ca
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -122,9 +122,9 @@ Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "c
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_bf324"
-[1/2] Building C object CMakeFiles/cmTC_bf324.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_bf324
+Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_fe3af"
+[1/2] Building C object CMakeFiles/cmTC_fe3af.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_fe3af
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -136,9 +136,9 @@ Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "c
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_35af2"
-[1/2] Building C object CMakeFiles/cmTC_35af2.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_35af2
+Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_ef26d"
+[1/2] Building C object CMakeFiles/cmTC_ef26d.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_ef26d
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -148,17 +148,17 @@ Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "c
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_f5b4b"
-[1/2] Building CXX object CMakeFiles/cmTC_f5b4b.dir/testCXXCompiler.cxx.o
-[2/2] Linking CXX executable cmTC_f5b4b
+Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_22f40"
+[1/2] Building CXX object CMakeFiles/cmTC_22f40.dir/testCXXCompiler.cxx.o
+[2/2] Linking CXX executable cmTC_22f40
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_e504e"
-[1/2] Building CXX object CMakeFiles/cmTC_e504e.dir/CMakeCXXCompilerABI.cpp.o
-[2/2] Linking CXX executable cmTC_e504e
+Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_88c56"
+[1/2] Building CXX object CMakeFiles/cmTC_88c56.dir/CMakeCXXCompilerABI.cpp.o
+[2/2] Linking CXX executable cmTC_88c56
 Android clang version 3.8.275480  (based on LLVM 3.8.275480)
 Target: x86_64-none-linux-android
 Thread model: posix
@@ -169,16 +169,16 @@ Candidate multilib: .;@m64
 Candidate multilib: 32;@m32
 Candidate multilib: x32;@mx32
 Selected multilib: .;@m64
- "/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/bin/ld" --sysroot=/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64 -pie -z relro --eh-frame-hdr -m elf_x86_64 -dynamic-linker /system/bin/linker64 -o cmTC_e504e /home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64/crtbegin_dynamic.o -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/lib/../lib64 -L/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64 -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/lib -L/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_e504e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl /home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64/crtend_android.o
+ "/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/bin/ld" --sysroot=/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64 -pie -z relro --eh-frame-hdr -m elf_x86_64 -dynamic-linker /system/bin/linker64 -o cmTC_88c56 /home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64/crtbegin_dynamic.o -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/lib/../lib64 -L/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64 -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/lib -L/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_88c56.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl /home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64/crtend_android.o
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(x86_64-linux-android-ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_e504e"]
-  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_e504e.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [[2/2] Linking CXX executable cmTC_e504e]
+  ignore line: [Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_88c56"]
+  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_88c56.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [[2/2] Linking CXX executable cmTC_88c56]
   ignore line: [Android clang version 3.8.275480  (based on LLVM 3.8.275480)]
   ignore line: [Target: x86_64-none-linux-android]
   ignore line: [Thread model: posix]
@@ -193,7 +193,7 @@ Parsed CXX implicit link information from above output:
   ignore line: [@mx32]
   ignore line: [Selected multilib: .]
   ignore line: [@m64]
-  link line: [ "/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/bin/ld" --sysroot=/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64 -pie -z relro --eh-frame-hdr -m elf_x86_64 -dynamic-linker /system/bin/linker64 -o cmTC_e504e /home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64/crtbegin_dynamic.o -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/lib/../lib64 -L/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64 -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/lib -L/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_e504e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl /home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64/crtend_android.o]
+  link line: [ "/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/bin/ld" --sysroot=/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64 -pie -z relro --eh-frame-hdr -m elf_x86_64 -dynamic-linker /system/bin/linker64 -o cmTC_88c56 /home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64/crtbegin_dynamic.o -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/lib/../lib64 -L/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64 -L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/lib -L/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_88c56.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl /home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64/crtend_android.o]
     arg [/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/bin/ld] ==> ignore
     arg [--sysroot=/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64] ==> ignore
     arg [-pie] ==> ignore
@@ -204,7 +204,7 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/system/bin/linker64] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_e504e] ==> ignore
+    arg [cmTC_88c56] ==> ignore
     arg [/home/plldzy/soft/android-ndk-r14b/platforms/android-21/arch-x86_64/usr/lib/../lib64/crtbegin_dynamic.o] ==> ignore
     arg [-L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x] ==> dir [/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x]
     arg [-L/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/lib/../lib64] ==> dir [/home/plldzy/soft/android-ndk-r14b/toolchains/x86_64-4.9/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x/../../../../x86_64-linux-android/lib/../lib64]
@@ -229,7 +229,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [--gc-sections] ==> ignore
     arg [-znocopyreloc] ==> ignore
-    arg [CMakeFiles/cmTC_e504e.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_88c56.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc] ==> lib [gcc]
@@ -259,9 +259,9 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_1596e"
-[1/2] Building CXX object CMakeFiles/cmTC_1596e.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_1596e
+Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_a86af"
+[1/2] Building CXX object CMakeFiles/cmTC_a86af.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_a86af
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -326,9 +326,9 @@ Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "c
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_0112a"
-[1/2] Building CXX object CMakeFiles/cmTC_0112a.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_0112a
+Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_8cb7d"
+[1/2] Building CXX object CMakeFiles/cmTC_8cb7d.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_8cb7d
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -393,9 +393,9 @@ Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "c
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_fa5e9"
-[1/2] Building CXX object CMakeFiles/cmTC_fa5e9.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_fa5e9
+Run Build Command:"/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja" "cmTC_70e0e"
+[1/2] Building CXX object CMakeFiles/cmTC_70e0e.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_70e0e
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers

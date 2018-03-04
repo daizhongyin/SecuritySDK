@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SecuritySDK.iml" filepath="$PROJECT_DIR$/.idea/modules/SecuritySDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SecuritySDK.iml" filepath="$PROJECT_DIR$/SecuritySDK.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/securitysdkcore/securitysdkcore.iml" filepath="$PROJECT_DIR$/securitysdkcore/securitysdkcore.iml" />
     </modules>

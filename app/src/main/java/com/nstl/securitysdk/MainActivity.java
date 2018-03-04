@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.nstl.securitysdkcore.HelpUtil;
@@ -15,6 +16,8 @@ import com.nstl.securitysdkcore.config.SecuritySDKConfig;
 import com.nstl.securitysdkcore.config.WebviewConfig;
 import com.nstl.securitysdkcore.reinforce.DetectRootUtil;
 import com.nstl.securitysdkcore.reinforce.bean.InstallPackageInfo;
+import com.nstl.securitysdkcore.webview.IMethodInvokeInterface;
+import com.nstl.securitysdkcore.webview.SafeWebView;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -35,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Example of a call to a native method
-        TextView tv = (TextView) findViewById(R.id.sample_text);
+        //TextView tv = (TextView) findViewById(R.id.sample_text);
         //tv.setText("hello“");
         /*HelpUtil helpUtil = new HelpUtil();
         List<InstallPackageInfo> installPackageInfoList = helpUtil.getInstallPackageAndSig(this);
@@ -44,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             builder.append(pkg.getPkgName());
         }*/
         DetectRootUtil detectRootUtil = DetectRootUtil.getInstance(this);
-        tv.setText("设备是否root：" + detectRootUtil.isRoot());
+        Toast.makeText(this, "设备是否root：" + detectRootUtil.isRoot(), Toast.LENGTH_SHORT).show();
         SecuritySDKConfig sdkConfig = new SecuritySDKConfig();
 
         //webview的过滤配置规则
@@ -115,13 +118,23 @@ public class MainActivity extends AppCompatActivity {
         String jsonStr = JSON.toJSONString(sdkConfig);
         Log.i(TAG, jsonStr);
         sdkConfig = JSON.parseObject(jsonStr, SecuritySDKConfig.class);
-        tv.setText(sdkConfig.getIntentUriList().get(0).getUriHostList().get(0));
+        //tv.setText(sdkConfig.getIntentUriList().get(0).getUriHostList().get(0));
 
         //配置文件的初始化
-        Map<String, String> params = new HashMap<String, String>();
+       /* Map<String, String> params = new HashMap<String, String>();
         params.put("username", "test");
         params.put("token", "123456");
-        SecuritySDKInit.getInstance(this).syncConfig("http://192.168.199.164:8080/mytest/test.txt", params);
+        SecuritySDKInit.getInstance(this).syncConfig("http://192.168.199.164:8080/mytest/test.txt", params);*/
+        SafeWebView webView = (SafeWebView)this.findViewById(R.id.my_webview);
+        IMethodInvokeInterface methodInvokeInterface = new IMethodInvokeInterface() {
+            @Override
+            public String dispatch(String data) {
+                //业务方在此处处理JS回调
+                return null;
+            }
+        };
+        webView.init(this, methodInvokeInterface);
+        webView.loadUrl("http://www.baidu.com");
     }
 
     /**

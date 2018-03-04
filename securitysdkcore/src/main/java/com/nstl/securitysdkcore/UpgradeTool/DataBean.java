@@ -10,7 +10,8 @@ public class DataBean {
     private String isForce;
     private String version;
     private int vercode;
-    private String md5SignCode;
+    private String verifyCode;              //下载内容的MD5等验证值
+    private String singnedVerifyCode;       //RSA私钥签名后的验证值(需要业务方在应用中传递公钥验证改值是否合法)
 
     public void setDescription(String description){
         this.description = description;
@@ -42,10 +43,20 @@ public class DataBean {
     public void setVercode(int vercode){
         this.vercode = vercode;
     }
-    public void setMd5SignCode(String md5SignCode){
-        this.md5SignCode = md5SignCode;
+
+    public String getVerifyCode() {
+        return verifyCode;
     }
-    public String getMd5SignCode(){
-        return this.md5SignCode;
+
+    public void setVerifyCode(String verifyCode) {
+        this.verifyCode = verifyCode;
+    }
+
+    public String getSingnedVerifyCode() {
+        return singnedVerifyCode;
+    }
+
+    public void setSingnedVerifyCode(String singnedVerifyCode) {
+        this.singnedVerifyCode = singnedVerifyCode;
     }
 }

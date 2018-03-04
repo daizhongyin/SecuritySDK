@@ -1,5 +1,5 @@
 {
-  "intentUriList": [
+  /*"intentUriList": [
     {
       "actionStringList": [
         "com.action.view",
@@ -26,13 +26,13 @@
         "$ref": "$.intentUriList[0]"
       }
     }
-  ],
+  ],*/
   "timeout": 100000,                  // 更新间隔，SDK提供修改接口，业务方根据策略，分批设置更新时间，来缓解服务器压力.默认是单位是秒.
   "updateAndDownloadUrlWhiteList": [
     "safedownload.com"
   ],
-  "version": "1.0",                   //当前配置信息的版本
-  "webviewConfig": {
+  "version": "1.0"                   //当前配置信息的版本
+  /*"webviewConfig": {
     "methodList": [
       {
         "methodArgMap": {
@@ -49,5 +49,5 @@
     "urlWhiteList": [
       "baidu.com"
     ]
-  }
+  }*/
 }

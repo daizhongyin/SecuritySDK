@@ -15,11 +15,15 @@ import android.text.TextUtils;
 import android.webkit.MimeTypeMap;
 
 import com.alibaba.fastjson.JSON;
+import com.nstl.securitysdkcore.HelpUtil;
 import com.nstl.securitysdkcore.config.ConfigFileToObject;
 
 import java.io.File;
+import java.security.KeyFactory;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.security.PublicKey;
+import java.security.spec.X509EncodedKeySpec;
 
 /**
  * Created by Lin on 2017/12/27.
@@ -35,17 +39,19 @@ public class UpgradeTool {
     private ISafeInstall iSafeInstall;
     private Context mContext;
     private BroadcastReceiver receiver;
+    private String publicKey = null;            //RSA公钥，用来验证DataBean中的singnedVerifyCode是否和verifyCode一致，防止非法劫持
 
     private String TAG = "TEST";
 
     /**
      *
      * @param mContext  上下文
+     * @param publicKey RSA公钥，用来验证DataBean中的singnedVerifyCode是否和verifyCode一致，防止非法劫持
      * @param savePath  保存路径
      * @param fileName  保存的文件名
      * @param iSafeInstall  业务实现的安装接口
      */
-    public UpgradeTool( Context mContext,String savePath ,String fileName, ISafeInstall iSafeInstall ){
+    public UpgradeTool( Context mContext,String publicKey, UpgradeModel upgradeModel, String savePath ,String fileName, ISafeInstall iSafeInstall ){
         //请求json数据
         //反序列化为UpgradeModel
         //这是测试的请求字符串，此处应为一个http请求
@@ -62,11 +68,12 @@ public class UpgradeTool {
                 "  },\n" +
                 "  \"msg\": \"download apk\"\n" +
                 "}";
-        this.upgradeModel = JSON.parseObject(jsonStr,UpgradeModel.class);
+        this.upgradeModel = upgradeModel;
         this.savePath = savePath;
         this.fileName = fileName;
         this.iSafeInstall = iSafeInstall;
         this.mContext = mContext;
+        this.publicKey = publicKey;
 
         this.receiver = new BroadcastReceiver() {
             @Override
@@ -93,9 +100,13 @@ public class UpgradeTool {
                 case DownloadManager.STATUS_RUNNING:
                     break;
                 case DownloadManager.STATUS_SUCCESSFUL:
-                    //下载完成安装APK
-                    this.iSafeInstall.install(mContext,savePath,fileName,this.upgradeModel.getDataBean().getIsForce());
-                    this.iSafeInstall.getErrMsg("download apk is success");
+                    //下载完成,先校验下载的应用和签名是否合法，然后安装APK
+                    if(checkPkgSign(mContext, savePath, fileName)){
+                        this.iSafeInstall.install(mContext,savePath,fileName,this.upgradeModel.getDataBean().getIsForce());
+                    }else{
+                        this.iSafeInstall.getErrMsg("download apk is success");
+                    }
+
                     break;
                 case DownloadManager.STATUS_FAILED:
                     this.iSafeInstall.getErrMsg("download apk is failed");
@@ -140,11 +151,6 @@ public class UpgradeTool {
      * upgrade方法，对外提供调用的方法
      */
     public void upgrade(){
-
-        //判断请求的host 是否在白名单内,不在的话，调用接口的xxx方法
-        if( !ConfigFileToObject.getSecuritySDKConfig(mContext).getUpdateAndDownloadUrlWhiteList().contains(this.upgradeModel.getDataBean().getDownUrl())){
-            this.iSafeInstall.getErrMsg("utl is not exist in whilelist");
-        }
         int verCode = this.iSafeInstall.getVerCode();
         // TODO: 2017/12/31
         if(this.upgradeModel.getDataBean().getVercode() <= verCode){
@@ -163,80 +169,50 @@ public class UpgradeTool {
      * @return
      */
     private boolean checkPkgSign(Context context,String savePath,String fileName){
-
-        String apkFilePath = getSDPath() + savePath + "\\" + fileName;
-        //此时应该是加密后的sign，应该对其进行解密
-        String sign = this.upgradeModel.getDataBean().getMd5SignCode();
-        if(this.apkSignCheck(mContext,apkFilePath,sign )){
+        String apkFilePath = savePath + File.separator + fileName;
+        String signCode = this.upgradeModel.getDataBean().getSingnedVerifyCode();   //生成的签名
+        String code = this.upgradeModel.getDataBean().getVerifyCode();      //被签的原文
+        //验证签名信息
+        if(verifySignedVerifyCode(signCode, code)&& this.apkSignCheck(mContext,apkFilePath,code)){
             return true;
+        }else{
+            return false;
         }
-        return false;
     }
-
-    /**
-     * 获取sd卡的路径信息
-     * @return
-     */
-    public String getSDPath(){
-        File sdDir = null;
-        boolean sdCardExist = Environment.getExternalStorageState()
-                .equals(android.os.Environment.MEDIA_MOUNTED);//判断sd卡是否存在
-        if(sdCardExist)
-        {
-            sdDir = Environment.getExternalStorageDirectory();//获取跟目录
-        }
-        return sdDir.toString();
-    }
-    /**
-     * 检查apk的签名
-     * @param ct
-     * @param sig
-     * @return
-     */
-    private boolean apkSignCheck(Context ct, String apkFilePath, String sig){
-        //2.读取APK中的META-INF目录下的签名文件，验证一致性
-        boolean flag = true;
-        if (TextUtils.isEmpty(apkFilePath))
-            return true;
-        PackageManager pm = ct.getPackageManager();
-        PackageInfo pi = pm.getPackageArchiveInfo(apkFilePath, PackageManager.GET_SIGNATURES);
-        if(pi != null){
-            Signature[] signatures = pi.signatures;
-            if(signatures != null && signatures.length > 0){
-                String signature =  encryptionMD5(signatures[0].toByteArray());
-                if(signature.equals(sig))
-                    flag = false;
-            }
+    //使用公钥用来验证DataBean中的singnedVerifyCode是否和verifyCode一致，防止下载被非法劫持
+    private boolean verifySignedVerifyCode(String signCode, String code){
+        boolean flag = false;
+        try{
+            KeyFactory kf = KeyFactory.getInstance("RSA");
+            X509EncodedKeySpec keySpec = new X509EncodedKeySpec(this.publicKey.getBytes());
+            PublicKey pKey = kf.generatePublic(keySpec);
+            java.security.Signature signature = java.security.Signature.getInstance("SHA1withRSA");
+            signature.initVerify(pKey);
+            signature.update(code.getBytes());
+            flag = signature.verify(signCode.getBytes());
+        }catch (Exception e){
+            e.printStackTrace();
+            flag = false;
         }
         return flag;
     }
 
     /**
-     * md5签名
-     * @param byteStr
-     * @return
+     * 检查下载的apk或者文件的MD5信息是否跟文件自身匹配
+     * @param ct
+     * @param md5Code           下载文件的MD5值
+     * @return              true,下载内容MD5验证合法，false MD5验证非法
      */
-    private  String encryptionMD5(byte[] byteStr) {
-        MessageDigest messageDigest = null;
-        StringBuffer md5StrBuff = new StringBuffer();
-        try {
-            messageDigest = MessageDigest.getInstance("MD5");
-            messageDigest.reset();
-            messageDigest.update(byteStr);
-            byte[] byteArray = messageDigest.digest();
-            for (int i = 0; i < byteArray.length; i++) {
-                if (Integer.toHexString(0xFF & byteArray[i]).length() == 1) {
-                    md5StrBuff.append("0").append(Integer.toHexString(0xFF & byteArray[i]));
-                } else {
-                    md5StrBuff.append(Integer.toHexString(0xFF & byteArray[i]));
-                }
-            }
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-        return md5StrBuff.toString();
+    private boolean apkSignCheck(Context ct, String apkFilePath, String md5Code){
+        //2.读取APK中的META-INF目录下的签名文件，验证一致性
+        boolean flag = false;
+        if (TextUtils.isEmpty(apkFilePath))
+            return flag;
+        File downloadFile = new File(apkFilePath);
+        String downloadFileMD5 = HelpUtil.getFileMD5(downloadFile);
+        flag = md5Code.equals(downloadFileMD5);
+        return flag;
     }
-
 
 
 }

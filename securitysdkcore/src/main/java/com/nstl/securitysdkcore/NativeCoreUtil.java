@@ -18,6 +18,7 @@ public class NativeCoreUtil {
     public native void rePackage(Object mContext,IVerifyListener verifyListener);		// 重打包
     public native int detectInject(Object mcontext);       //注入检测
     public native int isExisSUAndExecute();             //是否存在su文件并且是可执行的
+    public native String getRemoteAppSign(Object context,String pkgname);
 
 
 }

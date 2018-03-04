@@ -92,3 +92,11 @@ JNIEXPORT jint JNICALL Java_com_nstl_securitysdkcore_NativeCoreUtil_isExisSUAndE
     return result;
 
 }
+extern "C"
+JNIEXPORT jstring JNICALL
+Java_com_nstl_securitysdkcore_NativeCoreUtil_getRemoteAppSign(JNIEnv *env, jobject instance,
+                                                              jobject context, jstring pkgname_) {
+    char *sha1 =getAppSignSha1(env,context,pkgname_);
+    // TODO
+    return charsTojstring(env,sha1);
+}

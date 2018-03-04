@@ -9,7 +9,7 @@ import java.util.Map;
  */
 
 public class InterceptMethod {
-    private int type = 0;                                   //拦截调用的配置方式：黑白名单，0是黑名单，非0是白名单
+    private int type = 0;                                   //拦截调用的配置方式：黑白名单，0是黑名单，-1拦截该方法，不用比较方法的参数内容，其他值都是白名单
     private String methodNmae;                              //需要拦截的方法名
     private Map<Integer,String> methodArgMap = null;        //需要拦截的方法的参数列表集合key是第几个参数，value是参数内容
 
