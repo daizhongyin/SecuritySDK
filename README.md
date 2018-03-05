@@ -59,13 +59,12 @@
                 savePath  保存路径
                 fileName  保存的文件名
                 iSafeInstall  业务实现的安装接口
-			业务方下载更新或者相关插件时，只需要调用upgrade方法，流程如下：
-			判断开发版本号是否需要升级 -> 下载apk -> 调用ISafeInstall的具体实现类的Install方法
 ###使用方法
 	（1）实现ISafeInstall接口类
 	（2）初始化UpgradeTool对象，传入参数
-			Context，savePath，fileName，接口类的实现类对象
+			Context，publicKey,savePath，fileName，接口类的实现类对象
 	（3）调用upgrade方法即可。
+	业务方下载更新或者相关插件时，只需要调用upgrade方法，流程如下：判断开发版本号是否需要升级 -> 下载apk -> 调用ISafeInstall的具体实现类的Install方法
 ###相关事项
     （1）securicysdkcore是安全sdk的核心功能实现，app是测试安全sdk的demo apk
      (2)项目成员：daizy(daizhongyin@126.com)、张林(97615274@qq.com)、唐海洋(ffthy@qq.com)。如有任何问题，欢迎随时联系我们。
