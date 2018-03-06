@@ -1,15 +1,15 @@
-Executable : /home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/cmake
+Executable : C:\Users\Lin\AppData\Local\Android\Sdk\cmake\3.6.4111459\bin\cmake.exe
 arguments : 
--H/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore
--B/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64
+-HC:\Users\Lin\Desktop\SecuritySDK\securitysdkcore
+-BC:\Users\Lin\Desktop\SecuritySDK\securitysdkcore\.externalNativeBuild\cmake\debug\x86_64
 -DANDROID_ABI=x86_64
 -DANDROID_PLATFORM=android-21
--DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/build/intermediates/cmake/debug/obj/x86_64
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\Lin\Desktop\SecuritySDK\securitysdkcore\build\intermediates\cmake\debug\obj\x86_64
 -DCMAKE_BUILD_TYPE=Debug
--DANDROID_NDK=/home/plldzy/soft/android-ndk-r14b
+-DANDROID_NDK=C:\Users\Lin\AppData\Local\Android\Sdk\ndk-bundle
 -DCMAKE_CXX_FLAGS=
--DCMAKE_TOOLCHAIN_FILE=/home/plldzy/soft/android-ndk-r14b/build/cmake/android.toolchain.cmake
--DCMAKE_MAKE_PROGRAM=/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja
+-DCMAKE_TOOLCHAIN_FILE=C:\Users\Lin\AppData\Local\Android\Sdk\ndk-bundle\build\cmake\android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=C:\Users\Lin\AppData\Local\Android\Sdk\cmake\3.6.4111459\bin\ninja.exe
 -GAndroid Gradle - Ninja
 jvmArgs : 
 
