@@ -68,3 +68,28 @@
 ###相关事项
     （1）securicysdkcore是安全sdk的核心功能实现，app是测试安全sdk的demo apk
      (2)项目成员：daizy(daizhongyin@126.com)、张林(97615274@qq.com)、唐海洋(ffthy@qq.com)。如有任何问题，欢迎随时联系我们。
+#AndroidSo 加解密
+	核心加解密过程如下：
+		1、首先获取.so 在内存中加载的基址
+		2、因为android 系统对于.so的加载是基于段的，dynamic段中包含了多个节区，有hash,dynstr(函数的名字在该节区中)，符号表
+		3、由于hash表和dynstr表  节区 的类型不唯一，有可能是别的，所以在dynamic段中寻找
+		4、hash表中存储了符号表中对应的索引，通过函数名进行哈希运算得到索引，然后去符号表中，符号表的结构是1、dynstr中的索引 2、地址 3、大小
+		5、通过符号表中的第一个字节获取dynstr中对应的字符串 ，然后比对，比对成功则进行加密解密
+	参考：
+		http://blog.csdn.net/jiangwei0910410003/article/details/49966719
+		http://bbs.pediy.com/thread-191649.htm
+##sdk各文件及其相关API说明
+	1、Rc4Util.h Rc4Util.cpp（RC4加密算法的实现文件）
+	注：
+		因为涉及到修改内存操作，目前暂考虑同位加密，为此选取了RC4加密算法，RC4加密算法原理这里暂不介绍，请自行google。
+	2、
+
+###使用过程
+	（1）业务方将解密的核心代码加入到自己的native代码中，指定SO_NAME（生成的SO名称），FUNC_NAME（加密函数名），RCE_KEY(加密密钥)，RC4_KEY_LEN（加密密钥的长度），生成so
+	注：密钥分发和保存
+	（2）将so进行加密，指定加密的函数名、加密的密钥（此时加密SO的RC4密钥需要与解密的密钥一致），加密的so文件路径（EncodeSo类中RC4_KEY,funcName,so_path）
+	（3）业务方在Build.gradle中指定加载so的方式，如Jnilibs、libs等等，将加密后的so放到指定的路径下即可
+	（4）在需要调用jni的地方， static {
+        System.loadLibrary("加密后的so库名称");
+    }
+
