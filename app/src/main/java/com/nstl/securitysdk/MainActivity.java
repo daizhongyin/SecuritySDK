@@ -1,8 +1,16 @@
 package com.nstl.securitysdk;
 
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.ServiceConnection;
+import android.os.IBinder;
+import android.os.RemoteException;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,7 +26,7 @@ import com.nstl.securitysdkcore.reinforce.DetectRootUtil;
 import com.nstl.securitysdkcore.reinforce.bean.InstallPackageInfo;
 import com.nstl.securitysdkcore.webview.IMethodInvokeInterface;
 import com.nstl.securitysdkcore.webview.SafeWebView;
-
+import com.nstl.securitysdkcore.HelpUtil;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -61,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         List<InterceptMethod> methodList = new LinkedList<InterceptMethod>();
 
         InterceptMethod method = new InterceptMethod();
-        Map<Integer,String> methodArgMap = new HashMap<Integer, String>();
+        Map<Integer, String> methodArgMap = new HashMap<Integer, String>();
         methodArgMap.put(1, "baidu.com");
         method.setType(1);          //白名单方式过滤openurl函数的第一个参数，只允许host是baidu.com的url
         method.setMethodNmae("openurl");
@@ -125,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
         params.put("username", "test");
         params.put("token", "123456");
         SecuritySDKInit.getInstance(this).syncConfig("http://192.168.199.164:8080/mytest/test.txt", params);*/
-        SafeWebView webView = (SafeWebView)this.findViewById(R.id.my_webview);
+        SafeWebView webView = (SafeWebView) this.findViewById(R.id.my_webview);
         IMethodInvokeInterface methodInvokeInterface = new IMethodInvokeInterface() {
             @Override
             public String dispatch(String data) {
@@ -135,11 +143,60 @@ public class MainActivity extends AppCompatActivity {
         };
         webView.init(this, methodInvokeInterface);
         webView.loadUrl("http://www.baidu.com");
-    }
+        //远程调用
+        final TextView tv3 = (TextView) findViewById(R.id.IPC_check);
+        Intent service = new Intent(MainActivity.this, MyService.class);
+        ServiceConnection serviceConnection = new ServiceConnection() {
+            @Override
+            public void onServiceConnected(ComponentName name, IBinder service) {
+                if ((service instanceof IMyAidlInterface.Stub) == false) {
+                    Log.d(TAG, "service " + (service instanceof IMyAidlInterface.Stub));
+                }
+                IMyAidlInterface myAidlInterface = IMyAidlInterface.Stub.asInterface(service);
+                try {
+                    String s = myAidlInterface.getInfoFromCli("hello from Cli");
+                    tv3.setText(s);
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
+            }
 
-    /**
-     * A native method that is implemented by the 'native-lib' native library,
-     * which is packaged with this application.
-     */
-    //public native String stringFromJNI();
+            @Override
+            public void onServiceDisconnected(ComponentName name) {
+
+            }
+        };
+        bindService(service, serviceConnection, Context.BIND_AUTO_CREATE);
+
+
+        //远程调用 包名查看
+        String referrerStr = HelpUtil.reflectGetReferrer(this);
+        final TextView tv4 = (TextView) findViewById(R.id.caller_name);
+        tv4.setText("caller namer:" + referrerStr);
+
+        //https访问
+        Button button = (Button) findViewById(R.id.myButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Thread(new Runnable() {
+
+                    @Override
+                    public void run() {
+                        try {
+                            HelpUtil.initSSLWithHttpClient(MainActivity.this);
+                        } catch (Exception e) {
+                            Log.e("HTTPS TEST", e.getMessage());
+                        }
+                    }
+                }).start();
+            }
+        });
+
+        /**
+         * A native method that is implemented by the 'native-lib' native library,
+         * which is packaged with this application.
+         */
+        //public native String stringFromJNI();
+    }
 }

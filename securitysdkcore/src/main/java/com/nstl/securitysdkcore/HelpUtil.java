@@ -5,17 +5,28 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.os.Environment;
+import android.util.Log;
 
+import com.nstl.securitysdkcore.crypt.CryptAndHttps;
 import com.nstl.securitysdkcore.reinforce.bean.InstallPackageInfo;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.lang.reflect.Field;
 import java.math.BigInteger;
 import java.security.MessageDigest;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+
+import javax.net.ssl.HttpsURLConnection;
 
 /**
  * Created by plldzy on 17-11-17.
@@ -89,5 +100,67 @@ public class HelpUtil {
             sdDir = Environment.getExternalStorageDirectory();//获取跟目录
         }
         return sdDir.toString();
+    }
+    /**
+     * 通过反射的方法获得refererField
+     * @return
+     */
+    public static String reflectGetReferrer(Context context) {
+        Class activityClass = null;
+        try {
+            activityClass = Class.forName("android.app.Activity");
+            Field refererField = activityClass.getDeclaredField("mReferrer");
+            refererField.setAccessible(true);
+            String referrer = (String) refererField.get(context);
+            return referrer;
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return  null;
+    }
+    /**
+     *  测试https链接 assets文件夹中必须提前配有服务器对应的cer证书
+     * @return
+     */
+    public static void initSSLWithHttpClient(Context context) {
+        try {
+            String CertName="zhihu.cer";
+            InputStream cerInput=new BufferedInputStream(context.getAssets().open(CertName));
+            List<String> IpAndHosts= new ArrayList();
+            IpAndHosts.add("192.168.0.32");
+            HttpsURLConnection conn= CryptAndHttps.getHttpsUrlConnection("https://zhuanlan.zhihu.com/p/22816331",IpAndHosts,cerInput);
+            conn.connect();
+            InputStream  in = conn.getInputStream();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+            String line = "";
+            StringBuffer result = new StringBuffer();
+            while ((line = reader.readLine()) != null) {
+                result.append(line);
+            }
+            Log.d("TTTT", result.toString());
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    public static String bytesToHexString(byte[] src){
+        StringBuilder stringBuilder = new StringBuilder("");
+        if (src == null || src.length <= 0) {
+            return null;
+        }
+        for (int i = 0; i < src.length; i++) {
+            int v = src[i] & 0xFF;
+            String hv = Integer.toHexString(v);
+            if (hv.length() < 2) {
+                stringBuilder.append(0);
+            }
+            stringBuilder.append(hv);
+        }
+        return stringBuilder.toString();
     }
 }

@@ -41,10 +41,25 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/InjectDetected_id"/>
 
-    <com.nstl.securitysdkcore.webview.SafeWebView
-        android:id="@+id/my_webview"
-        android:layout_width="match_parent"
-        android:layout_height="400dp">
-    </com.nstl.securitysdkcore.webview.SafeWebView>
+    <TextView
+        android:id="@+id/caller_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="caller name"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/IPC_check"/>
+    <Button
+        android:id="@+id/myButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="https登陆"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/caller_name"/>
+
+    <!--<com.nstl.securitysdkcore.webview.SafeWebView-->
+        <!--android:id="@+id/my_webview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="400dp">-->
+    <!--</com.nstl.securitysdkcore.webview.SafeWebView>-->
 
 </RelativeLayout>

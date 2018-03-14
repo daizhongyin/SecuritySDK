@@ -1,9 +1,9 @@
-set(CMAKE_HOST_SYSTEM "Linux-4.13.0-36-generic")
-set(CMAKE_HOST_SYSTEM_NAME "Linux")
-set(CMAKE_HOST_SYSTEM_VERSION "4.13.0-36-generic")
-set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
+set(CMAKE_HOST_SYSTEM "Windows-10.0.16299")
+set(CMAKE_HOST_SYSTEM_NAME "Windows")
+set(CMAKE_HOST_SYSTEM_VERSION "10.0.16299")
+set(CMAKE_HOST_SYSTEM_PROCESSOR "AMD64")
 
-include("/home/plldzy/soft/android-ndk-r14b/build/cmake/android.toolchain.cmake")
+include("C:/sdk/android-ndk-r15c/build/cmake/android.toolchain.cmake")
 
 set(CMAKE_SYSTEM "Android-21")
 set(CMAKE_SYSTEM_NAME "Android")

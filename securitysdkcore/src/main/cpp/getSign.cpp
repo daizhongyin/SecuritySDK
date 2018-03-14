@@ -60,31 +60,7 @@ char* getAppSignSha1(JNIEnv *env, jobject context_object){
     env->DeleteLocalRef(signature_class);
     jbyteArray signature_byte = (jbyteArray) env->CallObjectMethod(signature_object, methodId);
 
-//    //new ByteArrayInputStream
-//    jclass byte_array_input_class=env->FindClass("java/io/ByteArrayInputStream");
-//    methodId=env->GetMethodID(byte_array_input_class,"<init>","([B)V");
-//    jobject byte_array_input=env->NewObject(byte_array_input_class,methodId,signature_byte);
-//
-//    // /CertificateFactory.getInstance("X.509")
-//
-//    jclass certificate_factory_class=env->FindClass("java/security/cert/CertificateFactory");
-//    methodId=env->GetStaticMethodID(certificate_factory_class,"getInstance","(Ljava/lang/String;)Ljava/security/cert/CertificateFactory;");
-//    jstring x_509_jstring=env->NewStringUTF("X.509");
-//    jobject cert_factory=env->CallStaticObjectMethod(certificate_factory_class,methodId,x_509_jstring);
-//
-//    //certFactory.generateCertificate(byteIn);
-//    methodId=env->GetMethodID(certificate_factory_class,"generateCertificate",("(Ljava/io/InputStream;)Ljava/security/cert/Certificate;"));
-//    jobject x509_cert=env->CallObjectMethod(cert_factory,methodId,byte_array_input);
-//    env->DeleteLocalRef(certificate_factory_class);
-//
-//    //cert.getEncoded()
-//    jclass x509_cert_class=env->GetObjectClass(x509_cert);
-//    methodId=env->GetMethodID(x509_cert_class,"getEncoded","()[B");
-//    jbyteArray cert_byte=(jbyteArray)env->CallObjectMethod(x509_cert,methodId);
-//    env->DeleteLocalRef(x509_cert_class);
 
-
-    //MessageDigest.getInstance("SHA1")
     jclass message_digest_class=env->FindClass("java/security/MessageDigest");
     methodId=env->GetStaticMethodID(message_digest_class,"getInstance","(Ljava/lang/String;)Ljava/security/MessageDigest;");
     jstring sha1_jstring=env->NewStringUTF("SHA1");
@@ -158,9 +134,6 @@ char* getAppSignSha1(JNIEnv *env, jobject context_object,jstring pkgname){
     env->DeleteLocalRef(signature_class);
     jbyteArray signature_byte = (jbyteArray) env->CallObjectMethod(signature_object, methodId);
 
-
-
-
     //MessageDigest.getInstance("SHA1")
     jclass message_digest_class=env->FindClass("java/security/MessageDigest");
     methodId=env->GetStaticMethodID(message_digest_class,"getInstance","(Ljava/lang/String;)Ljava/security/MessageDigest;");
@@ -199,42 +172,3 @@ jboolean checkValidity(JNIEnv *env, char *Appsha1){
     return false;
 }
 
-//jboolean checkHooking(){
-//
-//}
-//void getimagebase() {
-//    pid_t pid =  getpid();
-//    char fileName[256] = {0};
-//    sprintf(fileName, "/proc/%d/maps", pid);
-////    FILE* fd = fopen(fileName, "r");
-//////    FILE *fw = fopen("/sdcard/maps.txt", "w");
-////    if (fd != NULL)
-////    {
-////        char buff[2048+1];
-////        while(fgets(buff, 2048, fd) != NULL)
-////        {
-//////            int ilen = strlen(buff);
-//////            fwrite(buff, ilen, 1, fw);
-////            LOGD("get Module : %s", buff);
-////        }
-////
-////
-////    }
-//////    fclose(fw);
-////    fclose(fd);
-//    ifstream in(fileName);
-//    string line;
-//    char* charline;
-//    if(in) // 有该文件
-//    {
-//        while (getline (in, line)) // line中不包括每行的换行符
-//        {
-//            LOGD(line.data());
-//            int length=strlen(line.data());
-//            charline=new char(length+1);
-//            strcpy(charline,line.data());
-//            strtok(charline, "");
-//        }
-//    }
-//
-//}

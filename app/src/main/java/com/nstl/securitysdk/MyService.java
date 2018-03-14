@@ -18,6 +18,10 @@ public class MyService extends Service {
     }
     private IBinder binder = new IMyAidlInterface.Stub(){
 
+        /**
+         * 利用flag进行调用者是否合法的判定.
+         */
+
         @Override
         public String getInfoFromCli(String s) throws RemoteException {
            Boolean flag= BinderSecurityUtil.checkClientSig(getApplicationContext());
