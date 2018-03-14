@@ -82,7 +82,12 @@
 	1、Rc4Util.h Rc4Util.cpp（RC4加密算法的实现文件）
 	注：
 		因为涉及到修改内存操作，目前暂考虑同位加密，为此选取了RC4加密算法，RC4加密算法原理这里暂不介绍，请自行google。
-	2、
+	2、 getSign.cpp getSign.h(获取签名）
+	 通过NativeCoreUtil类中的getRemoteAppSign函数进行调用。传入上下文和包名，返回远程调用的签名。本地签名哈希暂时写在getSign.cpp文件中。
+    3、插件调用拦截。使用PluginInvokeValidate 类中的validate函数进行拦截，初始化安全策略文件写在键intercept_plugin_invoke中。
+    4、安全通信 调用接口为CryptAndHttps类中的getHttpsUrlConnection函数。使用前 必须先配置服务器证书，证书文件放在Assets目录。具体使用时见MainActivity中的Https登录按钮。
+    
+        
 
 ###使用过程
 	（1）业务方将解密的核心代码加入到自己的native代码中，指定SO_NAME（生成的SO名称），FUNC_NAME（加密函数名），RCE_KEY(加密密钥)，RC4_KEY_LEN（加密密钥的长度），生成so
