@@ -57,7 +57,11 @@ import javax.net.ssl.TrustManagerFactory;
 public class CryptAndHttps {
     public static final String SIGN_ALGORITHMS = "SHA1WithRSA"; //签名算法
     public static String TAG="CryptAndHttps";
-    //初始化AES的key
+
+    /**
+     *     //初始化AES的key
+     * @return
+     */
     private static byte[] getAESKey(){
         try {
             KeyGenerator kg = KeyGenerator.getInstance("AES");
@@ -73,7 +77,13 @@ public class CryptAndHttps {
         }
         return null;
     }
-    // AES加密 ,提供初始密钥种子
+
+    /**
+     * AES加密 ,提供初始密钥种子
+     * @param data
+     * @param keyByte
+     * @return
+     */
     private static byte[] encryptDataByAES(String data, byte[] keyByte){
         try {
             KeyGenerator kgen = KeyGenerator.getInstance("AES");
@@ -102,7 +112,11 @@ public class CryptAndHttps {
         return null;
     }
 
-    //AES加密,不提供初始密钥
+    /**
+     *     //AES加密,不提供初始密钥
+     * @param data
+     * @return
+     */
     private static byte[] encryptDataByAES(String data){
         try {
             byte[] enCodeFormat =getAESKey();
@@ -127,7 +141,16 @@ public class CryptAndHttps {
         }
         return null;
     }
-    //用AES加密内容，然后非对称公钥加密AES的key
+
+
+    /**
+     *     //用AES加密内容，然后非对称公钥加密AES的key
+     * @param sourceData
+     * @param publicKey
+     * @param type
+     * @return
+     * @throws Exception
+     */
     public static EncryptData aesEocdeBodyAsymmetricEncodeKey(String sourceData, String publicKey, int type) throws Exception {
         byte aesKey[] = getAESKey();
         EncryptData encryptData = new EncryptData();
@@ -139,7 +162,14 @@ public class CryptAndHttps {
         }
         return encryptData;
     }
-    //RSA公钥加密
+
+    /**
+     * //RSA公钥加密
+     * @param data
+     * @param rsaPublicKey
+     * @return
+     * @throws Exception
+     */
     public static byte[] encryptByRSAPublicKey(byte[] data, String rsaPublicKey) throws Exception  {
         RSAPublicKey publicKey=loadPublicKeyByStr(rsaPublicKey);
         Cipher cipher = Cipher.getInstance(publicKey.getAlgorithm());
@@ -165,7 +195,13 @@ public class CryptAndHttps {
         return encryptedData;
 
     }
-    //ECC公钥加密
+
+    /**
+     * //ECC公钥加密
+     * @param data
+     * @param eccPublicKey
+     * @return
+     */
     public static byte[] encryptByECCPublicKey(byte[] data, String eccPublicKey){
 //        byte[] keyBytes = Base64.decode(eccPublicKey,Base64.DEFAULT);
 //        X509EncodedKeySpec x509KeySpec = new X509EncodedKeySpec(keyBytes);
@@ -178,7 +214,14 @@ public class CryptAndHttps {
 //                pubKey.getParams());
         return null;
     }
-    //RSA签名校验
+
+    /**
+     * //RSA签名校验
+     * @param data
+     * @param rsaPublicKey
+     * @param sign
+     * @return
+     */
     public static boolean verifyByRSA(byte[] data, String rsaPublicKey, String sign){
         //RSAPublicKey publicKey=loadPublicKeyByStr(rsaPublicKey);
         try
@@ -204,11 +247,27 @@ public class CryptAndHttps {
         return false;
 
     }
-    //ECC签名校验
+
+
+    /**
+     *     //ECC签名校验
+     * @param data
+     * @param eccPublicKey
+     * @param sign
+     * @return
+     */
     public static boolean verifyByECC(byte[] data, String eccPublicKey, String sign){
         return false;
     }
-    //生成信息摘要算法，type=1表示sha256,type=2表示sha512
+
+
+    /**
+     *    //生成信息摘要算法，type=1表示sha256,type=2表示sha512
+     * @param sourceStr
+     * @param type
+     * @return
+     * @throws NoSuchAlgorithmException
+     */
     public static String getHashBySHA(String sourceStr, int type) throws NoSuchAlgorithmException {
         String algorithm = type == 1 ? "SHA-256" : "SHA-512";
         MessageDigest md= MessageDigest.getInstance(algorithm);
@@ -249,6 +308,12 @@ public class CryptAndHttps {
         return httpsConn;
     }
 
+    /**
+     *
+     * @param publicKeyStr
+     * @return
+     * @throws Exception
+     */
     public static RSAPublicKey loadPublicKeyByStr(String publicKeyStr)
             throws Exception {
         try {
@@ -264,6 +329,12 @@ public class CryptAndHttps {
             throw new Exception("公钥数据为空");
         }
     }
+
+    /**
+     *
+     * @param certInputstream
+     * @return
+     */
     public static SSLSocketFactory generateSSLSocketFactory(InputStream certInputstream) {
         try {
             // is = new FileInputStream("anchor.crt");
@@ -271,19 +342,19 @@ public class CryptAndHttps {
             Certificate ca = cf.generateCertificate(certInputstream);
             //Log.d(TAG, ((X509Certificate)ca).getPublicKey().toString());
 
-// 创建 Keystore 包含我们的证书
+            // 创建 Keystore 包含我们的证书
             String keyStoreType = KeyStore.getDefaultType();
             KeyStore keyStore = KeyStore.getInstance(keyStoreType);
             keyStore.load(null);
             keyStore.setCertificateEntry("anchor", ca);
 
-// 创建一个 TrustManager 仅把 Keystore 中的证书 作为信任的锚点
+            // 创建一个 TrustManager 仅把 Keystore 中的证书 作为信任的锚点
             String algorithm = TrustManagerFactory.getDefaultAlgorithm();
             TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance(algorithm);
             trustManagerFactory.init(keyStore);
             TrustManager[] trustManagers = trustManagerFactory.getTrustManagers();
 
-// 用 TrustManager 初始化一个 SSLContext
+            // 用 TrustManager 初始化一个 SSLContext
             SSLContext sslContext = SSLContext.getInstance("TLS");
             sslContext.init(null, trustManagers, null);
             return sslContext.getSocketFactory();

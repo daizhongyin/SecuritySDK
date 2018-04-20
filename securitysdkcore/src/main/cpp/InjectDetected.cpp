@@ -1,6 +1,7 @@
 #include <cstdio>
 #include <unistd.h>
 #include <fstream>
+#include <string.h>
 #include "Util.h"
 #include "InjectDetected.h"
 using namespace std;

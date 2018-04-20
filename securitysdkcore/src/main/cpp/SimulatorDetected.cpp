@@ -1,6 +1,7 @@
 //
 // Created by Lin on 2017/11/13.
 //
+#include <string.h>
 #include "SimulatorDetected.h"
 
 /*

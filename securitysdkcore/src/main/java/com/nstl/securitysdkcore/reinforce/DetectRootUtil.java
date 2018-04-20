@@ -35,7 +35,11 @@ public class DetectRootUtil {
         }
         return instance;
     }
-    //查看系统是正式版还是测试版，测试版可以运行root能力
+
+    /**
+     * 查看系统是正式版还是测试版，测试版可以运行root能力
+     * @return
+     */
     private static boolean checkDeviceDebuggable(){
         String buildTags = Build.TAGS;
         if(buildTags != null && buildTags.contains("test-keys")){
@@ -43,7 +47,10 @@ public class DetectRootUtil {
         }
         return false;
     }
-    //检测root授权管理和进行root的应用APK
+    /**
+     *     //检测root授权管理和进行root的应用APK
+     * @return
+     */
     private static boolean checkRootApk(){
         boolean flag = false;
         List<InstallPackageInfo> installPackageInfoList = HelpUtil.getInstallPackageAndSig(context);
@@ -56,7 +63,11 @@ public class DetectRootUtil {
         }
         return flag;
     }
-    //检测是否存在su,并确定su是否是可执行的提权程序
+
+    /**
+     *     //检测是否存在su,并确定su是否是可执行的提权程序
+     * @return
+     */
     private static boolean checkExitSUAndIsExecute(){
         boolean flag = false;
         NativeCoreUtil nativeCoreUtil = new NativeCoreUtil();
@@ -64,6 +75,11 @@ public class DetectRootUtil {
             flag = true;
         return flag;
     }
+
+    /**
+     * 检测设备是否被root
+     * @return
+     */
     public boolean isRoot(){
         boolean flag = false;
         flag = checkDeviceDebuggable();

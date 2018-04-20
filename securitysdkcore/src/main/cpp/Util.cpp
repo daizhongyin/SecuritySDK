@@ -1,6 +1,7 @@
 //
 // Created by Lin on 2017/11/15.
 //
+#include <string.h>
 #include "Util.h"
 /**
  * jni中string转化成char[]

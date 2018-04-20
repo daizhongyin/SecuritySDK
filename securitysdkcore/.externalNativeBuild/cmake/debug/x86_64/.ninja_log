@@ -1,0 +1,8 @@
+# ninja log v5
+69	354	0	CMakeFiles/native-lib.dir/src/main/cpp/BasicInfor.cpp.o	adb31e5d925e56d3
+45	494	0	CMakeFiles/native-lib.dir/src/main/cpp/getSign.cpp.o	f0974b2a187a8c63
+63	532	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	7624cd57dca78fb8
+3	158	0	CMakeFiles/native-lib.dir/src/main/cpp/Util.cpp.o	70bb2975163daa5b
+3	192	0	CMakeFiles/native-lib.dir/src/main/cpp/SimulatorDetected.cpp.o	e2fb5db43fb0d915
+3	223	0	CMakeFiles/native-lib.dir/src/main/cpp/InjectDetected.cpp.o	1ac9e7182a24a52f
+224	443	0	../../../../build/intermediates/cmake/debug/obj/x86_64/libnative-lib.so	a740d33f2fa7e0d6

@@ -18,7 +18,6 @@ import java.util.concurrent.FutureTask;
  * 进行Http请求:get和post
  * 推荐使用https，如果是自定义证书，可以调用CryptAndHttps中的api进行通信
  */
-
 public class HttpUtil {
     public static String doGet(final String url){
         final StringBuilder sb = new StringBuilder();
@@ -65,7 +64,14 @@ public class HttpUtil {
         }
         return s;
     }
-    //post会提交相关参数，如cookie等账号信息，所以需要params参数
+
+
+    /**
+     *     //post会提交相关参数，如cookie等账号信息，所以需要params参数
+     * @param url
+     * @param params
+     * @return
+     */
     public static String doPost(final String url, final Map<String, String> params){
         final StringBuilder sb = new StringBuilder();
         FutureTask<String> task = new FutureTask<String>(new Callable<String>() {

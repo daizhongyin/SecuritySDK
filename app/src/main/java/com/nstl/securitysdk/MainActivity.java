@@ -16,17 +16,24 @@ import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.nstl.securitysdkcore.HelpUtil;
+import com.nstl.securitysdkcore.NativeCoreUtil;
+import com.nstl.securitysdkcore.SafeZipFile;
 import com.nstl.securitysdkcore.SecuritySDKInit;
+import com.nstl.securitysdkcore.UpgradeTool.UpgradeModel;
+import com.nstl.securitysdkcore.UpgradeTool.UpgradeTool;
 import com.nstl.securitysdkcore.config.IntentUriScheme;
 import com.nstl.securitysdkcore.config.InterceptMethod;
 import com.nstl.securitysdkcore.config.InterceptPluginInvoke;
 import com.nstl.securitysdkcore.config.SecuritySDKConfig;
 import com.nstl.securitysdkcore.config.WebviewConfig;
 import com.nstl.securitysdkcore.reinforce.DetectRootUtil;
+import com.nstl.securitysdkcore.reinforce.IVerifyListener;
 import com.nstl.securitysdkcore.reinforce.bean.InstallPackageInfo;
 import com.nstl.securitysdkcore.webview.IMethodInvokeInterface;
 import com.nstl.securitysdkcore.webview.SafeWebView;
 import com.nstl.securitysdkcore.HelpUtil;
+
+import java.io.File;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -54,10 +61,52 @@ public class MainActivity extends AppCompatActivity {
         for(InstallPackageInfo pkg : installPackageInfoList){
             builder.append(pkg.getPkgName());
         }*/
+
+        //查看设备是否root
         DetectRootUtil detectRootUtil = DetectRootUtil.getInstance(this);
         Toast.makeText(this, "设备是否root：" + detectRootUtil.isRoot(), Toast.LENGTH_SHORT).show();
+
+        //查看是否在调试应用
+        NativeCoreUtil nativeCoreUtil = new NativeCoreUtil();
+        Toast.makeText(this, "设备是否在调试阶段：" + nativeCoreUtil.debugPresent(), Toast.LENGTH_SHORT).show();
+
+        //查看设备是否是模拟器
+        Toast.makeText(this, "设备是否是模拟器：" + nativeCoreUtil.runInEmulator(this), Toast.LENGTH_SHORT).show();
+
+        //查看应用是否被重打包
+        IVerifyListener iVerifyListener = new IVerifyListener() {
+            @Override
+            public void onVerifySuccess() {
+                Toast.makeText(getApplicationContext(),"success",Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onVerifyFail() {
+                Toast.makeText(getApplicationContext(),"failed",Toast.LENGTH_SHORT).show();
+            }
+        };
+        nativeCoreUtil.rePackage(this, iVerifyListener);
+
+        //是否注入
+        Toast.makeText(this, "应用是否被注入：" + nativeCoreUtil.detectInject(this), Toast.LENGTH_SHORT).show();
+
+
+        //安全检测zip文件,提供路径
+        File zipFile  = new File("");
+        String md5Str = "";
+        SafeZipFile safeZipFile = new SafeZipFile(this, zipFile, md5Str);
+        Toast.makeText(this, "文件："+zipFile.getName() + "是否是安全的: " + safeZipFile.isLegalZipFile(), Toast.LENGTH_SHORT).show();
+
+        //upgradetool 升级测试
+        String public_key = "";
+        String upgrade_model_json = ""; //此处应该是从服务器获取json串，然后反json为Upgrade
+        UpgradeModel upgradeModel = JSON.parseObject(upgrade_model_json,UpgradeModel.class);
+        String sava_path = "";
+        String file_nme = "";
+        //UpgradeTool upgradeTool = new UpgradeTool(this,public_key,upgradeModel,)
         SecuritySDKConfig sdkConfig = new SecuritySDKConfig();
 
+        //查看
         //webview的过滤配置规则
         WebviewConfig webviewConfig = new WebviewConfig();
         List<String> urlWhiteList = new LinkedList<String>();

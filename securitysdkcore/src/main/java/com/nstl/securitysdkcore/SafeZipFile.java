@@ -35,7 +35,7 @@ public class SafeZipFile{
      * @param context Context上下文
      * @param md5Sig 要校验的签名证书的MD5值(可以通过keytool工具来查看)
      */
-    public SafeZipFile(File file, Context context, String md5Sig){
+    public SafeZipFile( Context context, File file, String md5Sig){
         apkFilePath = file.getAbsolutePath();
         context = context;
         md5Sig = md5Sig;

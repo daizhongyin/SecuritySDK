@@ -1,12 +1,9 @@
 
 {
-	"buildFiles" : 
-	[
-		"C:/Users/ffthy/AndroidStudioProjects/SecuritySDK/securitysdkcore/CMakeLists.txt"
-	],
+	"buildFiles" : [ "C:/Users/Lin/Desktop/SecuritySDK/securitysdkcore/CMakeLists.txt" ],
 	"cleanCommands" : 
 	[
-		"C:\\sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\ffthy\\AndroidStudioProjects\\SecuritySDK\\securitysdkcore\\.externalNativeBuild\\cmake\\release\\x86 --target clean"
+		"C:\\Users\\Lin\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Lin\\Desktop\\SecuritySDK\\securitysdkcore\\.externalNativeBuild\\cmake\\release\\x86 --target clean"
 	],
 	"cppFileExtensions" : [ "cpp" ],
 	"libraries" : 
@@ -15,57 +12,57 @@
 		{
 			"abi" : "x86",
 			"artifactName" : "native-lib",
-			"buildCommand" : "C:\\sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\ffthy\\AndroidStudioProjects\\SecuritySDK\\securitysdkcore\\.externalNativeBuild\\cmake\\release\\x86 --target native-lib",
+			"buildCommand" : "C:\\Users\\Lin\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Lin\\Desktop\\SecuritySDK\\securitysdkcore\\.externalNativeBuild\\cmake\\release\\x86 --target native-lib",
 			"buildType" : "release",
 			"files" : 
 			[
 				
 				{
-					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=C:/sdk/android-ndk-r15c/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=C:/sdk/android-ndk-r15c/sysroot  -Dnative_lib_EXPORTS -isystem C:\\sdk\\android-ndk-r15c\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\sdk\\android-ndk-r15c\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86\\include -isystem C:\\sdk\\android-ndk-r15c\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem C:/sdk/android-ndk-r15c/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=18 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "C:/Users/ffthy/AndroidStudioProjects/SecuritySDK/securitysdkcore/src/main/cpp/InjectDetected.cpp",
-					"workingDirectory" : "C:/Users/ffthy/AndroidStudioProjects/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/release/x86"
+					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=C:/Users/Lin/AppData/Local/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Lin/AppData/Local/Android/Sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -isystem C:\\Users\\Lin\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\Lin\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86\\include -isystem C:\\Users\\Lin\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem C:/Users/Lin/AppData/Local/Android/Sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=18 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "C:/Users/Lin/Desktop/SecuritySDK/securitysdkcore/src/main/cpp/InjectDetected.cpp",
+					"workingDirectory" : "C:/Users/Lin/Desktop/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/release/x86"
 				},
 				
 				{
-					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=C:/sdk/android-ndk-r15c/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=C:/sdk/android-ndk-r15c/sysroot  -Dnative_lib_EXPORTS -isystem C:\\sdk\\android-ndk-r15c\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\sdk\\android-ndk-r15c\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86\\include -isystem C:\\sdk\\android-ndk-r15c\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem C:/sdk/android-ndk-r15c/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=18 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "C:/Users/ffthy/AndroidStudioProjects/SecuritySDK/securitysdkcore/src/main/cpp/getSign.cpp",
-					"workingDirectory" : "C:/Users/ffthy/AndroidStudioProjects/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/release/x86"
+					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=C:/Users/Lin/AppData/Local/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Lin/AppData/Local/Android/Sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -isystem C:\\Users\\Lin\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\Lin\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86\\include -isystem C:\\Users\\Lin\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem C:/Users/Lin/AppData/Local/Android/Sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=18 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "C:/Users/Lin/Desktop/SecuritySDK/securitysdkcore/src/main/cpp/getSign.cpp",
+					"workingDirectory" : "C:/Users/Lin/Desktop/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/release/x86"
 				},
 				
 				{
-					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=C:/sdk/android-ndk-r15c/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=C:/sdk/android-ndk-r15c/sysroot  -Dnative_lib_EXPORTS -isystem C:\\sdk\\android-ndk-r15c\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\sdk\\android-ndk-r15c\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86\\include -isystem C:\\sdk\\android-ndk-r15c\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem C:/sdk/android-ndk-r15c/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=18 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "C:/Users/ffthy/AndroidStudioProjects/SecuritySDK/securitysdkcore/src/main/cpp/native-lib.cpp",
-					"workingDirectory" : "C:/Users/ffthy/AndroidStudioProjects/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/release/x86"
+					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=C:/Users/Lin/AppData/Local/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Lin/AppData/Local/Android/Sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -isystem C:\\Users\\Lin\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\Lin\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86\\include -isystem C:\\Users\\Lin\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem C:/Users/Lin/AppData/Local/Android/Sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=18 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "C:/Users/Lin/Desktop/SecuritySDK/securitysdkcore/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "C:/Users/Lin/Desktop/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/release/x86"
 				},
 				
 				{
-					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=C:/sdk/android-ndk-r15c/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=C:/sdk/android-ndk-r15c/sysroot  -Dnative_lib_EXPORTS -isystem C:\\sdk\\android-ndk-r15c\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\sdk\\android-ndk-r15c\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86\\include -isystem C:\\sdk\\android-ndk-r15c\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem C:/sdk/android-ndk-r15c/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=18 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "C:/Users/ffthy/AndroidStudioProjects/SecuritySDK/securitysdkcore/src/main/cpp/BasicInfor.cpp",
-					"workingDirectory" : "C:/Users/ffthy/AndroidStudioProjects/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/release/x86"
+					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=C:/Users/Lin/AppData/Local/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Lin/AppData/Local/Android/Sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -isystem C:\\Users\\Lin\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\Lin\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86\\include -isystem C:\\Users\\Lin\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem C:/Users/Lin/AppData/Local/Android/Sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=18 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "C:/Users/Lin/Desktop/SecuritySDK/securitysdkcore/src/main/cpp/BasicInfor.cpp",
+					"workingDirectory" : "C:/Users/Lin/Desktop/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/release/x86"
 				},
 				
 				{
-					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=C:/sdk/android-ndk-r15c/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=C:/sdk/android-ndk-r15c/sysroot  -Dnative_lib_EXPORTS -isystem C:\\sdk\\android-ndk-r15c\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\sdk\\android-ndk-r15c\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86\\include -isystem C:\\sdk\\android-ndk-r15c\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem C:/sdk/android-ndk-r15c/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=18 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "C:/Users/ffthy/AndroidStudioProjects/SecuritySDK/securitysdkcore/src/main/cpp/Util.cpp",
-					"workingDirectory" : "C:/Users/ffthy/AndroidStudioProjects/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/release/x86"
+					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=C:/Users/Lin/AppData/Local/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Lin/AppData/Local/Android/Sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -isystem C:\\Users\\Lin\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\Lin\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86\\include -isystem C:\\Users\\Lin\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem C:/Users/Lin/AppData/Local/Android/Sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=18 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "C:/Users/Lin/Desktop/SecuritySDK/securitysdkcore/src/main/cpp/Util.cpp",
+					"workingDirectory" : "C:/Users/Lin/Desktop/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/release/x86"
 				},
 				
 				{
-					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=C:/sdk/android-ndk-r15c/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=C:/sdk/android-ndk-r15c/sysroot  -Dnative_lib_EXPORTS -isystem C:\\sdk\\android-ndk-r15c\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\sdk\\android-ndk-r15c\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86\\include -isystem C:\\sdk\\android-ndk-r15c\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem C:/sdk/android-ndk-r15c/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=18 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "C:/Users/ffthy/AndroidStudioProjects/SecuritySDK/securitysdkcore/src/main/cpp/SimulatorDetected.cpp",
-					"workingDirectory" : "C:/Users/ffthy/AndroidStudioProjects/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/release/x86"
+					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=C:/Users/Lin/AppData/Local/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/Lin/AppData/Local/Android/Sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -isystem C:\\Users\\Lin\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\Lin\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86\\include -isystem C:\\Users\\Lin\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem C:/Users/Lin/AppData/Local/Android/Sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=18 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "C:/Users/Lin/Desktop/SecuritySDK/securitysdkcore/src/main/cpp/SimulatorDetected.cpp",
+					"workingDirectory" : "C:/Users/Lin/Desktop/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/release/x86"
 				}
 			],
-			"output" : "C:/Users/ffthy/AndroidStudioProjects/SecuritySDK/securitysdkcore/build/intermediates/cmake/release/obj/x86/libnative-lib.so",
-			"toolchain" : "832853121"
+			"output" : "C:/Users/Lin/Desktop/SecuritySDK/securitysdkcore/build/intermediates/cmake/release/obj/x86/libnative-lib.so",
+			"toolchain" : "775907017"
 		}
 	},
 	"toolchains" : 
 	{
-		"832853121" : 
+		"775907017" : 
 		{
-			"cCompilerExecutable" : "C:/sdk/android-ndk-r15c/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
-			"cppCompilerExecutable" : "C:/sdk/android-ndk-r15c/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+			"cCompilerExecutable" : "C:/Users/Lin/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+			"cppCompilerExecutable" : "C:/Users/Lin/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
 		}
 	}
 }
