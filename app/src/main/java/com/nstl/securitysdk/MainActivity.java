@@ -19,6 +19,7 @@ import com.nstl.securitysdkcore.HelpUtil;
 import com.nstl.securitysdkcore.NativeCoreUtil;
 import com.nstl.securitysdkcore.SafeZipFile;
 import com.nstl.securitysdkcore.SecuritySDKInit;
+import com.nstl.securitysdkcore.UpgradeTool.ISafeInstall;
 import com.nstl.securitysdkcore.UpgradeTool.UpgradeModel;
 import com.nstl.securitysdkcore.UpgradeTool.UpgradeTool;
 import com.nstl.securitysdkcore.config.IntentUriScheme;
@@ -103,7 +104,25 @@ public class MainActivity extends AppCompatActivity {
         UpgradeModel upgradeModel = JSON.parseObject(upgrade_model_json,UpgradeModel.class);
         String sava_path = "";
         String file_nme = "";
-        //UpgradeTool upgradeTool = new UpgradeTool(this,public_key,upgradeModel,)
+        ISafeInstall iSafeInstall = new ISafeInstall() {
+            @Override
+            public int getVerCode() {
+                return 0;
+            }
+
+            @Override
+            public void install(Context context, String savePath, String fileName, String isForce) {
+
+            }
+
+            @Override
+            public String getErrMsg(String errMsg) {
+                return null;
+            }
+        };
+        UpgradeTool upgradeTool = new UpgradeTool(this, public_key, upgradeModel, sava_path, file_nme, iSafeInstall);
+
+        //webview 安全测试
         SecuritySDKConfig sdkConfig = new SecuritySDKConfig();
 
         //查看
@@ -191,7 +210,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         webView.init(this, methodInvokeInterface);
-        webView.loadUrl("http://www.baidu.com");
+        webView.loadUrl("http://www.test.com");
         //远程调用
         final TextView tv3 = (TextView) findViewById(R.id.IPC_check);
         Intent service = new Intent(MainActivity.this, MyService.class);
