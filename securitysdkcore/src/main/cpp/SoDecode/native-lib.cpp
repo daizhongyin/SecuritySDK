@@ -9,6 +9,7 @@
 #include <elf.h>
 #include <sys/mman.h>
 #include "Rc4Util.h"
+
 #define FUN_NAME "Java_com_example_lin_androidsoaddrc4_MainActivity_stringFromJNI"
 #define RC4_KEY "123456"
 #define RC4_KEY_LEN 6
@@ -23,12 +24,21 @@ typedef struct _funcInfo{
 
 void init_getString() __attribute__((constructor));
 
+/**
+ * 打印日志
+ * @param msg
+ */
 static void print_debug(const char *msg){
 #ifdef DEBUG
     __android_log_print(ANDROID_LOG_INFO, "JNITag", "%s", msg);
 #endif
 }
 
+/**
+ *hash运算
+ * @param _name
+ * @return
+ */
 static unsigned elfhash(const char *_name)
 {
     const unsigned char *name = (const unsigned char *) _name;
@@ -43,6 +53,10 @@ static unsigned elfhash(const char *_name)
     return h;
 }
 
+/**
+ * 获取当前链接库的地址
+ * @return
+ */
 static unsigned int getLibAddr(){
     unsigned int ret = 0;
     char name[] = SO_NAME;
@@ -68,7 +82,13 @@ static unsigned int getLibAddr(){
     fclose(fp);
     return ret;
 }
-
+/**
+ *获取待解密的函数的地址信息
+ * @param base
+ * @param funcName
+ * @param info
+ * @return
+ */
 static char getTargetFuncInfo(unsigned long base, const char *funcName, funcInfo *info){
     char flag = -1, *dynstr;
     int i;
@@ -84,9 +104,7 @@ static char getTargetFuncInfo(unsigned long base, const char *funcName, funcInfo
 
     ehdr = (Elf32_Ehdr *)base;
     phdr = (Elf32_Phdr *)(base + ehdr->e_phoff);
-//    __android_log_print(ANDROID_LOG_INFO, "JNITag", "phdr =  0x%p, size = 0x%x\n", phdr, ehdr->e_phnum);
     for (i = 0; i < ehdr->e_phnum; ++i) {
-//		__android_log_print(ANDROID_LOG_INFO, "JNITag", "phdr =  0x%p\n", phdr);
         if(phdr->p_type ==  PT_DYNAMIC){
             flag = 0;
             print_debug("Find .dynamic segment");
@@ -162,6 +180,9 @@ static char getTargetFuncInfo(unsigned long base, const char *funcName, funcInfo
 //    return -1;
 }
 
+/**
+ * 解密目标函数
+ */
 void init_getString(){
     const char target_fun[] = FUN_NAME;
     funcInfo info;
@@ -181,23 +202,16 @@ void init_getString(){
         print_debug("mem privilege change failed");
     }
 
-//    for(i=0;i< info.st_size - 1; i++){
-//        char *addr = (char*)(base + info.st_value -1 + i);
-//        *addr = ~(*addr);
-//    }
-//
     char *addr = (char*)(base + info.st_value -1);
-
     rc4_util((u_char *)addr,info.st_size,(u_char *)RC4_KEY,RC4_KEY_LEN);
-    for( i = 0;i < info.st_size; i++ ){
-        __android_log_print(ANDROID_LOG_INFO, "JNITag", "解密后的字节 =  0x%02x",addr[i] );
-    }
+//    for( i = 0;i < info.st_size; i++ ){
+//        __android_log_print(ANDROID_LOG_INFO, "JNITag", "解密后的字节 =  0x%02x",addr[i] );
+//    }
     if(mprotect((void *) ((base + info.st_value) / PAGE_SIZE * PAGE_SIZE), 4096*npage, PROT_READ | PROT_EXEC) != 0){
         print_debug("mem privilege change failed");
     }
 
 }
-
 
 extern "C"
 JNIEXPORT jstring

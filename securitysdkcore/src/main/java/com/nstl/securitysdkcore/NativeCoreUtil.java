@@ -20,5 +20,4 @@ public class NativeCoreUtil {
     public native int isExisSUAndExecute();             //是否存在su文件并且是可执行的
     public native String getRemoteAppSign(Object context,String pkgname);  //得到远程调用APP的签名
 
-
 }

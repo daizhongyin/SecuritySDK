@@ -1,4 +1,7 @@
-package com.nstl.securitysdkcore;
+package com.nstl.securitysdkcore.reinforce;
+/**
+ * Created by Lin on 2017/11/20.
+ */
 
 import android.content.Context;
 import android.content.pm.PackageInfo;
@@ -15,17 +18,12 @@ import java.security.NoSuchAlgorithmException;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-
-/**
- * Created by Lin on 2017/11/20.
- */
 /**
  * 为了保证ZIPFile读取APK文件的安全性，确保只有一个Dex，此外还需要确保APK中的签名和其自生代码的信息一致
  */
 public class SafeZipFile{
 
     private String apkFilePath = null;
-    private boolean zipFileIsIllegal = false;
     private Context context;
     private String md5Sig;
 
@@ -37,8 +35,8 @@ public class SafeZipFile{
      */
     public SafeZipFile( Context context, File file, String md5Sig){
         apkFilePath = file.getAbsolutePath();
-        context = context;
-        md5Sig = md5Sig;
+        this.context = context;
+        this.md5Sig = md5Sig;
     }
 
     /**

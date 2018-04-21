@@ -1,11 +1,7 @@
 package com.nstl.securitysdkcore.config;
 
 import android.content.Context;
-import android.util.Log;
-
-
 import com.alibaba.fastjson.JSON;
-
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;

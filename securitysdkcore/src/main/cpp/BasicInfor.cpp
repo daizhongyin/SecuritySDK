@@ -2,7 +2,11 @@
 // Created by Lin on 2017/11/13.
 //
 #include "BasicInfor.h"
-
+#include <string>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "Util.h"
 
 /*
  * 获取TelephoneManager

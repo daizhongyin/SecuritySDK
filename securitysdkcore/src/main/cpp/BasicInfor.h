@@ -2,11 +2,6 @@
 // Created by Lin on 2017/11/13.
 //
 #include <jni.h>
-#include <string>
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include "Util.h"
 #ifndef SECURITYSDK_BASICINFO_H
 #define SECURITYSDK_BASICINFO_H
 

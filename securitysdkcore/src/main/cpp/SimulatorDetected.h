@@ -2,11 +2,6 @@
 // Created by Lin on 2017/11/13.
 //
 #include <jni.h>
-#include <string>
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include "BasicInfor.h"
 #ifndef SECURITYSDK_SIMULATORDETECTED_H
 #define SECURITYSDK_SIMULATORDETECTED_H
 

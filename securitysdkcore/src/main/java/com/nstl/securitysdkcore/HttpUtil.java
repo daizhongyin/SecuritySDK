@@ -65,7 +65,6 @@ public class HttpUtil {
         return s;
     }
 
-
     /**
      *     //post会提交相关参数，如cookie等账号信息，所以需要params参数
      * @param url

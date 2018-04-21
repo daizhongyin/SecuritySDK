@@ -1,4 +1,17 @@
 #include "getSign.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <jni.h>
+#include <android/log.h>
+#include <string.h>
+#include <sys/ptrace.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <vector>
+#include <string>
+#include <fstream>
+#include <iostream>
+#include "Util.h"
 using namespace std;
 
 //签名信息

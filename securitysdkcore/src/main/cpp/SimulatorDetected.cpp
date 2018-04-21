@@ -2,7 +2,12 @@
 // Created by Lin on 2017/11/13.
 //
 #include <string.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "BasicInfor.h"
 #include "SimulatorDetected.h"
+#include "Util.h"
 
 /*
  * 获取模拟器特殊文件检测的权值

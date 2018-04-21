@@ -2,6 +2,7 @@
 // Created by Lin on 2017/11/15.
 //
 #include <string.h>
+#include <stdlib.h>
 #include "Util.h"
 /**
  * jni中string转化成char[]
@@ -26,8 +27,13 @@ char* jstringToChar(JNIEnv* env, jstring jstr) {
     env->ReleaseStringUTFChars(jstr, c_str);
     return rtn;
 }
-//把char数组转化成jstring对象，失败返回NULL
 
+/**
+ * //把char数组转化成jstring对象，失败返回NULL
+ * @param env
+ * @param str
+ * @return
+ */
 jstring charsTojstring(JNIEnv* env, char* str){
     jstring rtn = NULL;
     int slen = strlen(str);
@@ -56,8 +62,12 @@ jstring getErrorInfo(JNIEnv* env,char *file, const char *func, int line, char *m
     free(errinfo);
     return errinfoStr;
 }
-//byte数组转化成char数组
-
+/**
+ * //byte数组转化成char数组
+ * @param env
+ * @param bytearray
+ * @return
+ */
 char* ConvertJByteaArrayToChars(JNIEnv *env, jbyteArray bytearray) {
     char *chars = NULL;
     jbyte *bytes;

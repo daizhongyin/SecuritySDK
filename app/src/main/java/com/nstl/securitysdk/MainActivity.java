@@ -17,8 +17,7 @@ import android.widget.Toast;
 import com.alibaba.fastjson.JSON;
 import com.nstl.securitysdkcore.HelpUtil;
 import com.nstl.securitysdkcore.NativeCoreUtil;
-import com.nstl.securitysdkcore.SafeZipFile;
-import com.nstl.securitysdkcore.SecuritySDKInit;
+import com.nstl.securitysdkcore.reinforce.SafeZipFile;
 import com.nstl.securitysdkcore.UpgradeTool.ISafeInstall;
 import com.nstl.securitysdkcore.UpgradeTool.UpgradeModel;
 import com.nstl.securitysdkcore.UpgradeTool.UpgradeTool;
@@ -29,10 +28,8 @@ import com.nstl.securitysdkcore.config.SecuritySDKConfig;
 import com.nstl.securitysdkcore.config.WebviewConfig;
 import com.nstl.securitysdkcore.reinforce.DetectRootUtil;
 import com.nstl.securitysdkcore.reinforce.IVerifyListener;
-import com.nstl.securitysdkcore.reinforce.bean.InstallPackageInfo;
 import com.nstl.securitysdkcore.webview.IMethodInvokeInterface;
 import com.nstl.securitysdkcore.webview.SafeWebView;
-import com.nstl.securitysdkcore.HelpUtil;
 
 import java.io.File;
 import java.util.HashMap;
@@ -54,8 +51,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Example of a call to a native method
-        //TextView tv = (TextView) findViewById(R.id.sample_text);
-        //tv.setText("hello“");
         /*HelpUtil helpUtil = new HelpUtil();
         List<InstallPackageInfo> installPackageInfoList = helpUtil.getInstallPackageAndSig(this);
         StringBuilder builder = new StringBuilder();
@@ -63,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
             builder.append(pkg.getPkgName());
         }*/
 
+        //****************基础功能测试****************
         //查看设备是否root
         DetectRootUtil detectRootUtil = DetectRootUtil.getInstance(this);
         Toast.makeText(this, "设备是否root：" + detectRootUtil.isRoot(), Toast.LENGTH_SHORT).show();
@@ -78,12 +74,12 @@ public class MainActivity extends AppCompatActivity {
         IVerifyListener iVerifyListener = new IVerifyListener() {
             @Override
             public void onVerifySuccess() {
-                Toast.makeText(getApplicationContext(),"success",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "success", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onVerifyFail() {
-                Toast.makeText(getApplicationContext(),"failed",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "failed", Toast.LENGTH_SHORT).show();
             }
         };
         nativeCoreUtil.rePackage(this, iVerifyListener);
@@ -92,16 +88,17 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "应用是否被注入：" + nativeCoreUtil.detectInject(this), Toast.LENGTH_SHORT).show();
 
 
-        //安全检测zip文件,提供路径
-        File zipFile  = new File("");
+        //****************安全检测zip文件,提供路径****************
+        File zipFile = new File("");
         String md5Str = "";
         SafeZipFile safeZipFile = new SafeZipFile(this, zipFile, md5Str);
-        Toast.makeText(this, "文件："+zipFile.getName() + "是否是安全的: " + safeZipFile.isLegalZipFile(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "文件：" + zipFile.getName() + "是否是安全的: " + safeZipFile.isLegalZipFile(), Toast.LENGTH_SHORT).show();
 
-        //upgradetool 升级测试
+
+        //****************upgradetool 升级测试****************
         String public_key = "";
         String upgrade_model_json = ""; //此处应该是从服务器获取json串，然后反json为Upgrade
-        UpgradeModel upgradeModel = JSON.parseObject(upgrade_model_json,UpgradeModel.class);
+        UpgradeModel upgradeModel = JSON.parseObject(upgrade_model_json, UpgradeModel.class);
         String sava_path = "";
         String file_nme = "";
         ISafeInstall iSafeInstall = new ISafeInstall() {
@@ -122,9 +119,34 @@ public class MainActivity extends AppCompatActivity {
         };
         UpgradeTool upgradeTool = new UpgradeTool(this, public_key, upgradeModel, sava_path, file_nme, iSafeInstall);
 
-        //webview 安全测试
+
+        //****************webview 安全测试****************
+        SafeWebView safeWebView = (SafeWebView) this.findViewById(R.id.my_webview);
+        IMethodInvokeInterface iMethodInvokeInterface = new IMethodInvokeInterface() {
+            @Override
+            public String dispatch(String data) {
+                //业务方在此处处理JS回调
+                return null;
+            }
+        };
+        safeWebView.init(this, iMethodInvokeInterface);
+        //向js注册一个hander，js调用
+        safeWebView.registerHandler("safeWebViewInterface");
+        safeWebView.loadUrl("http://www.test.com");
+
+        //todo****************插件调用安全测试****************
+
+        //todo****************binder机制通信安全测试****************
+
+
+        //todo****************配置文件读取测试****************
         SecuritySDKConfig sdkConfig = new SecuritySDKConfig();
 
+        //todo****************https安全通信测试****************
+
+        //todo****************加密、解密组建测试****************
+
+        //todo****************移动威胁情报分析测试****************
         //查看
         //webview的过滤配置规则
         WebviewConfig webviewConfig = new WebviewConfig();
@@ -265,6 +287,5 @@ public class MainActivity extends AppCompatActivity {
          * A native method that is implemented by the 'native-lib' native library,
          * which is packaged with this application.
          */
-        //public native String stringFromJNI();
     }
 }

@@ -20,8 +20,6 @@ public class InstallPackageInfo {
     private long firstInstallTime;
     private long lastUpdateTime;
 
-    //private
-
     public String getPkgName() {
         return pkgName;
     }

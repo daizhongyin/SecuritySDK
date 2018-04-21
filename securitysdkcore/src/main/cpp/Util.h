@@ -1,10 +1,13 @@
-//
-// Created by plldzy on 17-11-15.
-//基础工具类:1)字符串jstring处理；2)生成错误信息；3)byte数组和char数组转换;4）log信息输出
-//
+
+/**
+ * Created by plldzy on 17-11-15.
+    基础工具类:
+        1)字符串jstring处理；
+        2)生成错误信息；
+        3)byte数组和char数组转换；
+        4）log信息输出
+ */
 #include <jni.h>
-#include <string>
-#include <stdlib.h>
 #include <android/log.h>
 #ifndef SECURITYSDK_BASICUTIL_H
 #define SECURITYSDK_BASICUTIL_H

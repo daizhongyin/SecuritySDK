@@ -1,35 +1,25 @@
 package com.nstl.securitysdkcore.UpgradeTool;
+/**
+ * Created by Lin on 2017/12/27.
+ */
 
 import android.app.DownloadManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.Signature;
 import android.database.Cursor;
 import android.net.Uri;
-import android.os.Environment;
 import android.text.TextUtils;
 import android.webkit.MimeTypeMap;
 
-import com.alibaba.fastjson.JSON;
 import com.nstl.securitysdkcore.HelpUtil;
-import com.nstl.securitysdkcore.HttpUtil;
-import com.nstl.securitysdkcore.config.ConfigFileToObject;
 
 import java.io.File;
 import java.security.KeyFactory;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.security.PublicKey;
 import java.security.spec.X509EncodedKeySpec;
 
-/**
- * Created by Lin on 2017/12/27.
- *
- */
 
 /**
  * UpgradeTool类

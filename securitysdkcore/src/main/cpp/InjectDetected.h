@@ -6,4 +6,5 @@
 #define SECURITYSDK_INJECTDETECTED_H
 
 int getimagebase();
+
 #endif //SECURITYSDK_INJECTDETECTED_H

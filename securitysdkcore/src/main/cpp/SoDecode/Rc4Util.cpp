@@ -63,7 +63,13 @@ rc4_crypt(struct rc4_state *const state,
         inbuf[i] = inbuf[i] ^ state->perm[j];
     }
 }
-
+/**
+ *
+ * @param inbuf
+ * @param buflen
+ * @param key
+ * @param keylen
+ */
 void rc4_util(u_char *inbuf, int buflen,const u_char *key, int keylen){
     struct rc4_state * state = (struct rc4_state *)malloc(258);
     rc4_init(state,key, keylen);

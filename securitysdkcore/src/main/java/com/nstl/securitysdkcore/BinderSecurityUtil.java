@@ -20,6 +20,7 @@ public class BinderSecurityUtil {
         NativeCoreUtil nativeCoreUtil=new NativeCoreUtil();
         String RemoteAppSign=nativeCoreUtil.getRemoteAppSign(context,callingApp);
         Log.d(TAG, "checkClientSig: "+RemoteAppSign);
+        //todo 将xxxx 换成一个配置文件读取的或者一个常量数据
         if(callingApp=="xxx"&&RemoteAppSign=="xxx"){
             return true;
         }

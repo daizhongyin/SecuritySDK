@@ -1,18 +1,14 @@
 package com.nstl.securitysdkcore;
-
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.os.Handler;
-
-import com.alibaba.fastjson.JSON;
-import com.nstl.securitysdkcore.config.SecuritySDKConfig;
-
-import java.util.Date;
-import java.util.Map;
-
 /**
  * Created by plldzy on 17-11-15.
  */
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Handler;
+import com.alibaba.fastjson.JSON;
+import com.nstl.securitysdkcore.config.SecuritySDKConfig;
+import java.util.Date;
+import java.util.Map;
 
 /**
  * SDK的配置文件更新和获取指定key的value
@@ -63,12 +59,22 @@ public class SecuritySDKInit {
         };
         updateHandler.postDelayed(runnable, sdkConfig.getTimeout());
     }
-    //获得配置文件中指定key的值，如webview的参数
+
+    /**
+     * 获得配置文件中指定key的值，如webview的参数
+     * @param keyName
+     * @return
+     */
     public String getConfigStringValueByKey(String keyName){
         return preferences.getString(keyName,null);
     }
 
-    //获得配置文件中指定key的值，如更新间隔时间
+
+    /**
+     * 获得配置文件中指定key的值，如更新间隔时间
+     * @param keyName
+     * @return
+     */
     public long getConfigLongValueByKey(String keyName){
         return preferences.getLong(keyName,-1);
     }

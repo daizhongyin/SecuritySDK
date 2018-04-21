@@ -146,6 +146,12 @@ public class HelpUtil {
         }
 
     }
+
+    /**
+     * 字节转String
+     * @param src
+     * @return
+     */
     public static String bytesToHexString(byte[] src){
         StringBuilder stringBuilder = new StringBuilder("");
         if (src == null || src.length <= 0) {

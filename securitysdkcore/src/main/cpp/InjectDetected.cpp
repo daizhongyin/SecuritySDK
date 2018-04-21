@@ -1,3 +1,6 @@
+//
+// Created by ffthy on 21/11/2017.
+//
 #include <cstdio>
 #include <unistd.h>
 #include <fstream>
@@ -5,12 +8,10 @@
 #include "Util.h"
 #include "InjectDetected.h"
 using namespace std;
-
-//
-// Created by ffthy on 21/11/2017.
-//
-//存在就是1
-// 不存在就是-1
+/**
+ * 存在就是1   不存在就是-1
+ * @return
+ */
 int  getimagebase() {
     pid_t pid =  getpid();
     char fileName[256] = {0};
