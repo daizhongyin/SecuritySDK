@@ -1,6 +1,8 @@
 #include <jni.h>
 #include <string>
 #include <unistd.h>
+#include <string.h>
+#include <stdlib.h>
 #include "Util.h"
 #include "SimulatorDetected.h"
 #include "getSign.h"

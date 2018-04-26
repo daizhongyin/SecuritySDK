@@ -10,10 +10,13 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
+import android.os.Environment;
 import android.text.TextUtils;
-import android.webkit.MimeTypeMap;
+import android.util.Log;
 
 import com.nstl.securitysdkcore.HelpUtil;
+import com.nstl.securitysdkcore.Util.VerifyUtil;
 
 import java.io.File;
 import java.security.KeyFactory;
@@ -27,19 +30,30 @@ import java.security.spec.X509EncodedKeySpec;
  */
 public class UpgradeTool {
 
+    //用户传入的接口
     private UpgradeModel upgradeModel;
 
+    //下载任务的id
     private long mTaskId;
-    private DownloadManager downloadManager;
 
+    //下载管理器
+    DownloadManager downloadManager;
+
+    //保存的路径和文件名
     private String savePath;
     private String fileName;
+
+    //用户实现的接口
     private ISafeInstall iSafeInstall;
 
+    //上下文信息
     private Context mContext;
+
+    //注册接收广播接收器
     private BroadcastReceiver receiver;
 
-    private String publicKey = null;            //RSA公钥，用来验证DataBean中的singnedVerifyCode是否和verifyCode一致，防止非法劫持
+    //RSA公钥，用来验证DataBean中的singnedVerifyCode是否和verifyCode一致，防止非法劫持
+    private String publicKey = null;
 
     /**
      * @param mContext     上下文
@@ -50,8 +64,16 @@ public class UpgradeTool {
      */
     public UpgradeTool(Context mContext, String publicKey, UpgradeModel upgradeModel, String savePath, String fileName, ISafeInstall iSafeInstall) {
         this.upgradeModel = upgradeModel;
-        this.savePath = savePath;
-        this.fileName = fileName;
+        if( savePath == null || savePath.isEmpty()){
+            this.savePath = "/download";
+        }else{
+            this.savePath = savePath;
+        }
+        if( fileName == null || fileName.isEmpty()){
+            this.fileName = "apk_upgrade.apk";
+        }else{
+            this.fileName = fileName;
+        }
         this.iSafeInstall = iSafeInstall;
         this.mContext = mContext;
         this.publicKey = publicKey;
@@ -59,72 +81,108 @@ public class UpgradeTool {
         this.receiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
-                //执行下载完成后的操作
+                //检查下载状态
                 checkDownloadStatus();
             }
         };
     }
 
     /**
-     * 检查下载的状态
+     * 检查下载的状态，根据不同的状态设置不同的getErrMessage
+     *
      */
     private void checkDownloadStatus() {
-        DownloadManager.Query query = new DownloadManager.Query();
-        //筛选下载任务，传入任务ID，可变参数
-        query.setFilterById(mTaskId);
-        Cursor c = downloadManager.query(query);
-        if (c.moveToFirst()) {
-            int status = c.getInt(c.getColumnIndex(DownloadManager.COLUMN_STATUS));
-            switch (status) {
-                // TODO: 2017/12/31 不同的处理状态
-                case DownloadManager.STATUS_PAUSED:
-                case DownloadManager.STATUS_PENDING:
-                case DownloadManager.STATUS_RUNNING:
-                    break;
-                case DownloadManager.STATUS_SUCCESSFUL:
-                    //下载完成,先校验下载的应用和签名是否合法，然后安装APK
-                    if (checkPkgSign(mContext, savePath, fileName)) {
-                        this.iSafeInstall.install(mContext, savePath, fileName, this.upgradeModel.getDataBean().getIsForce());
-                    } else {
-                        this.iSafeInstall.getErrMsg("download apk is success");
-                    }
-                    break;
-                case DownloadManager.STATUS_FAILED:
-                    this.iSafeInstall.getErrMsg("download apk is failed");
-                    break;
+        try {
+            DownloadManager.Query query = new DownloadManager.Query();
+            query.setFilterById(mTaskId);
+            Cursor cursor = downloadManager.query(query);
+
+            if (cursor == null) {
+                //todo 打印日志
+                iSafeInstall.getErrMsg("下载状态不可知");
+                return;
             }
+            if (cursor.moveToFirst()) {
+                int status = cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_STATUS));
+                switch (status) {
+                    case DownloadManager.STATUS_PAUSED:
+                        this.iSafeInstall.getErrMsg("download apk is pause");
+                        break;
+                    case DownloadManager.STATUS_PENDING:
+                        this.iSafeInstall.getErrMsg("download apk is pending");
+                        break;
+                    case DownloadManager.STATUS_RUNNING:
+                        this.iSafeInstall.getErrMsg("download apk is running");
+                        break;
+                    case DownloadManager.STATUS_SUCCESSFUL:
+                        //下载完成,先校验下载的应用和签名是否合法，然后安装APK
+                        if (checkPkgSign( savePath, fileName)) {
+                            this.iSafeInstall.install(mContext, savePath, fileName, this.upgradeModel.getDataBean().getIsForce());
+                        } else {
+                            this.iSafeInstall.getErrMsg("download apk is not allowed");
+                        }
+                        break;
+                    case DownloadManager.STATUS_FAILED:
+                        this.iSafeInstall.getErrMsg("download apk is failed");
+                        break;
+                }
+            }
+        } catch (Exception e) {
+            //todo 写入log
+            return;
         }
     }
 
     /**
      * 下载的apk文件
-     *
      * @param mContext 上下文
      * @param url      下载文件的url
      * @param savePath 下载文件的路径
      * @param fileName 下载后的文件名
      */
     private void downloadAPK(Context mContext, String url, String savePath, String fileName) {
-        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
-        //漫游网络是否可以下载，是否可以考虑业务来传递
-        request.setAllowedOverRoaming(false);
-        MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
-        String mimeString = mimeTypeMap.getMimeTypeFromExtension(MimeTypeMap.getFileExtensionFromUrl(url));
-        request.setMimeType(mimeString);
-        //在通知栏中显示，默认就是显示的
-        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE);
-        request.setVisibleInDownloadsUi(true);
-        //sdcard的目录下的download文件夹，必须设置
-        //设置文件存放目录
-        request.setDestinationInExternalPublicDir(savePath, fileName);
-        //将下载请求加入下载队列
-        downloadManager = (DownloadManager) mContext.getSystemService(Context.DOWNLOAD_SERVICE);
-        //加入下载队列后会给该任务返回一个long型的id，
-        //通过该id可以取消任务，重启任务等等，看上面源码中框起来的方法
-        mTaskId = downloadManager.enqueue(request);
-        //注册广播接收者，监听下载状态
-        mContext.registerReceiver(receiver,
-                new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
+        String apkUpgradeUrl = url;
+        if (apkUpgradeUrl == null || apkUpgradeUrl.isEmpty()) {
+            //todo 打印日志，提示url为空
+            iSafeInstall.getErrMsg("url is empty");
+            return;
+        }
+        apkUpgradeUrl = apkUpgradeUrl.trim();
+        if (!apkUpgradeUrl.startsWith("http")) {
+            apkUpgradeUrl = "http://" + apkUpgradeUrl;
+        }
+        try {
+            DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
+            request.setTitle(" ");
+            request.setDescription(" ");
+
+            //在通知栏显示下载进度
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+                request.allowScanningByMediaScanner();
+                request.setNotificationVisibility(DownloadManager.Request
+                        .VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+            }
+            //设置启用wifi
+            request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI);
+            //设置保存在sdcard上的路径
+            request.setDestinationInExternalPublicDir(savePath, fileName);
+            downloadManager = (DownloadManager)
+                    mContext.getSystemService(Context.DOWNLOAD_SERVICE);
+
+            //进入下载队列
+            this.mTaskId = downloadManager.enqueue(request);
+
+            //注册广播接收者，监听下载状态
+            IntentFilter intentFilter = new IntentFilter();
+            intentFilter.addAction(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
+            intentFilter.addAction(DownloadManager.ACTION_NOTIFICATION_CLICKED);
+            mContext.registerReceiver(receiver, intentFilter);
+
+        } catch (Exception e) {
+            //todo 打印日志
+            return;
+        }
+        return ;
     }
 
     /**
@@ -140,20 +198,49 @@ public class UpgradeTool {
         }
         //downLoad apk
         this.downloadAPK(mContext, this.upgradeModel.getDataBean().getDownUrl(), this.savePath, this.fileName);
+        return ;
     }
 
     /**
-     * @param context
      * @param savePath
      * @param fileName
      * @return
      */
-    private boolean checkPkgSign(Context context, String savePath, String fileName) {
-        String apkFilePath = savePath + File.separator + fileName;
-        String signCode = this.upgradeModel.getDataBean().getSingnedVerifyCode();   //生成的签名
-        String code = this.upgradeModel.getDataBean().getVerifyCode();      //被签的原文
+    private boolean checkPkgSign(String savePath, String fileName) {
+        if( savePath == null || savePath.isEmpty()){
+            return false;
+        }
+        if( fileName == null || fileName.isEmpty()){
+            return false;
+        }
+        String apkFilePath = getSDPath() + savePath + File.separator + fileName;
+
+        //判断文件是否存在
+        try
+        {
+            File file = new File(apkFilePath);
+            if(!file.exists())
+            {
+                iSafeInstall.getErrMsg("下载的文件找不到...");
+                return false;
+            }
+        }
+        catch (Exception e)
+        {
+            //todo 打印log
+            return false;
+        }
+        //生成的签名
+        String signCode = this.upgradeModel.getDataBean().getSingnedVerifyCode();
+
+        //被签的原文
+        String code = this.upgradeModel.getDataBean().getVerifyCode();
         //验证签名信息
-        if (verifySignedVerifyCode(signCode, code) && this.apkSignCheck(mContext, apkFilePath, code)) {
+        if (
+                VerifyUtil.verifySignedVerifyCode(this.publicKey, signCode, code) &&
+                VerifyUtil.fileMd5Check(apkFilePath, code)
+                )
+        {
             return true;
         } else {
             return false;
@@ -161,8 +248,22 @@ public class UpgradeTool {
     }
 
     /**
-     * 使用公钥用来验证DataBean中的singnedVerifyCode是否和verifyCode一致，防止下载被非法劫持
      *
+     * @return
+     */
+    public String getSDPath(){
+        File sdDir = null;
+        boolean sdCardExist = Environment.getExternalStorageState()
+                .equals(android.os.Environment.MEDIA_MOUNTED);//判断sd卡是否存在
+        if(sdCardExist)
+        {
+            sdDir = Environment.getExternalStorageDirectory();//获取跟目录
+        }
+        return sdDir.toString();
+    }
+
+    /**
+     * 使用公钥用来验证DataBean中的singnedVerifyCode是否和verifyCode一致，防止下载被非法劫持
      * @param signCode 签值
      * @param code
      * @return
@@ -178,6 +279,7 @@ public class UpgradeTool {
             signature.update(code.getBytes());
             flag = signature.verify(signCode.getBytes());
         } catch (Exception e) {
+            //todo 打印日志
             e.printStackTrace();
             flag = false;
         }
@@ -186,12 +288,10 @@ public class UpgradeTool {
 
     /**
      * 检查下载的apk或者文件的MD5信息是否跟文件自身匹配
-     *
-     * @param ct
      * @param md5Code 下载文件的MD5值
      * @return true, 下载内容MD5验证合法，false MD5验证非法
      */
-    private boolean apkSignCheck(Context ct, String apkFilePath, String md5Code) {
+    private boolean apkSignCheck(String apkFilePath, String md5Code) {
         //2.读取APK中的META-INF目录下的签名文件，验证一致性
         boolean flag = false;
         if (TextUtils.isEmpty(apkFilePath))

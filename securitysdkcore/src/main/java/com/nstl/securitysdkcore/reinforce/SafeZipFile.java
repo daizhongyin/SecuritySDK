@@ -9,6 +9,8 @@ import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.text.TextUtils;
 
+import com.nstl.securitysdkcore.Util.VerifyUtil;
+
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -44,8 +46,17 @@ public class SafeZipFile{
      * @return
      */
     public boolean isLegalZipFile(){
+        if( this.md5Sig == null || this.md5Sig.isEmpty()){
+            return false;
+        }
+        if( this.apkFilePath == null || this.apkFilePath.isEmpty()){
+            return false;
+        }
         try {
-            if( this.dexCheck() && this.apkSignCheck(this.context,this.md5Sig)){
+            if(     this.dexCheck() &&
+                    VerifyUtil.apkSignCheck(this.context,this.md5Sig,this.apkFilePath)
+                    )
+            {
                 return true;
             }
         } catch (IOException e) {
@@ -71,6 +82,11 @@ public class SafeZipFile{
                 continue;
             }else{
                 String entryName = zipEntry.getName();
+                //判断是否包含非法字符
+                if( entryName.contains("../") ){
+                    return false;
+                }
+                //判断是否包含多个dex文件
                 if( entryName.endsWith(".dex") ){
                     if( fileNameBuilder.toString().contains( entryName )){
                         return false;
@@ -82,6 +98,7 @@ public class SafeZipFile{
         }
         return true;
     }
+
 
     /**
      * 检查apk的签名
