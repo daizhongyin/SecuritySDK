@@ -18,10 +18,9 @@ public class BinderSecurityUtil {
         String callingApp = context.getPackageManager().getNameForUid(Binder.getCallingUid());
         Log.d(TAG, "checkClientSig: "+callingApp);
         NativeCoreUtil nativeCoreUtil=new NativeCoreUtil();
-        String RemoteAppSign=nativeCoreUtil.getRemoteAppSign(context,callingApp);
-        Log.d(TAG, "checkClientSig: "+RemoteAppSign);
-        //todo 将xxxx 换成一个配置文件读取的或者一个常量数据
-        if(callingApp=="xxx"&&RemoteAppSign=="xxx"){
+        String remoteAppSign=nativeCoreUtil.getRemoteAppSign(context,callingApp);
+        Log.d(TAG, "checkClientSig: "+remoteAppSign);
+        if("*************************".equals(remoteAppSign) && "com.text.package".equals(callingApp)){
             return true;
         }
         return  false;

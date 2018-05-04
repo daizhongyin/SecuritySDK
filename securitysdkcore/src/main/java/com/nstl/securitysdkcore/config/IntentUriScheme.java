@@ -14,7 +14,6 @@ public class IntentUriScheme {
     private List<String> intentTypeList = null;             //需要过滤的intent中的type
     private List<String> uriSchemeList = null;
     private List<String> uriHostList = null;
-    private List<Integer> uriPortList = null;
     private List<String> uriPathList = null;
     private Map<String, String> uriParaMaps = null;
 
@@ -42,13 +41,6 @@ public class IntentUriScheme {
         this.uriHostList = uriHostList;
     }
 
-    public List<Integer> getUriPortList() {
-        return uriPortList;
-    }
-
-    public void setUriPortList(List<Integer> uriPortList) {
-        this.uriPortList = uriPortList;
-    }
 
     public List<String> getUriPathList() {
         return uriPathList;

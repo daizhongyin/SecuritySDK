@@ -1,15 +1,15 @@
-Executable : C:\sdk\cmake\3.6.4111459\bin\cmake.exe
+Executable : /home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/cmake
 arguments : 
--HC:\Users\ffthy\AndroidStudioProjects\SecuritySDK\securitysdkcore
--BC:\Users\ffthy\AndroidStudioProjects\SecuritySDK\securitysdkcore\.externalNativeBuild\cmake\release\armeabi
+-H/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore
+-B/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/.externalNativeBuild/cmake/release/armeabi
 -DANDROID_ABI=armeabi
 -DANDROID_PLATFORM=android-18
--DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\ffthy\AndroidStudioProjects\SecuritySDK\securitysdkcore\build\intermediates\cmake\release\obj\armeabi
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/home/plldzy/workplace/androidstudio/SecuritySDK/securitysdkcore/build/intermediates/cmake/release/obj/armeabi
 -DCMAKE_BUILD_TYPE=Release
--DANDROID_NDK=C:\sdk\android-ndk-r15c
+-DANDROID_NDK=/home/plldzy/soft/android-ndk-r14b
 -DCMAKE_CXX_FLAGS=
--DCMAKE_TOOLCHAIN_FILE=C:\sdk\android-ndk-r15c\build\cmake\android.toolchain.cmake
--DCMAKE_MAKE_PROGRAM=C:\sdk\cmake\3.6.4111459\bin\ninja.exe
+-DCMAKE_TOOLCHAIN_FILE=/home/plldzy/soft/android-ndk-r14b/build/cmake/android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=/home/plldzy/soft/android-sdk/cmake/3.6.4111459/bin/ninja
 -GAndroid Gradle - Ninja
 jvmArgs : 
 

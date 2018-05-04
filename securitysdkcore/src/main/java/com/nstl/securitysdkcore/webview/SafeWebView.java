@@ -11,10 +11,13 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.alibaba.fastjson.JSON;
 import com.github.lzyzsd.jsbridge.BridgeHandler;
 import com.github.lzyzsd.jsbridge.BridgeWebView;
 import com.github.lzyzsd.jsbridge.BridgeWebViewClient;
 import com.github.lzyzsd.jsbridge.CallBackFunction;
+import com.nstl.securitysdkcore.SecuritySDKInit;
+import com.nstl.securitysdkcore.config.WebviewConfig;
 
 /**
  * Created by Lin on 2017/12/14.
@@ -25,6 +28,7 @@ public class SafeWebView extends BridgeWebView implements BridgeHandler {
     private IMethodInvokeInterface invokeInterface = null;          //业务方根据JS传递进来的参数，进行实际处理的类
     private WebSettings settings = null;
     private WebViewClient client = null;
+    private Context context = null;
 
     public SafeWebView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -46,6 +50,7 @@ public class SafeWebView extends BridgeWebView implements BridgeHandler {
      * @return void
      */
     public void init(Context context, IMethodInvokeInterface miInterface) {
+        this.context = context;
         settings = this.getSettings();
         settings.setJavaScriptCanOpenWindowsAutomatically(true);
         this.invokeInterface = miInterface;
@@ -142,11 +147,22 @@ public class SafeWebView extends BridgeWebView implements BridgeHandler {
      */
     private boolean urlISSafe(String urlStr) {
         boolean isSafeFlag = false;
+        String str = SecuritySDKInit.getInstance(context).getConfigStringValueByKey(SecuritySDKInit.WEBVIEWCONFIG);
+        WebviewConfig webviewConfig = JSON.parseObject(str, WebviewConfig.class);
         if (urlStr.startsWith("http") || urlStr.startsWith("https")) {
-            //匹配url是否是百度域下或者可信域
-            isSafeFlag = urlStr.matches("((http://)|(https://)){0,1}(/w/d)*.baidu.com");
+            String host = urlStr.substring(0, urlStr.indexOf("/"));
+            //匹配url是否是可信域
+            for(String s : webviewConfig.getUrlWhiteList()){
+                if(host.endsWith(s)){
+                    isSafeFlag = true;
+                    break;
+                }
+            }
+        }else{
+            //根据file协议类型来判断，url是否合法
+            isSafeFlag = fileUrlISSafe(urlStr);
         }
-        isSafeFlag = fileUrlISSafe(urlStr);
+
         return isSafeFlag;
     }
 

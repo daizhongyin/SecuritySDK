@@ -23,7 +23,6 @@ public class SecuritySDKInit {
     public final static String TIMEOUT = "time_out";
     public final static String WEBVIEWCONFIG = "Webview_config";
     public final static String INTENTURISCHEMELIST = "intent_uri";
-    public final static String URLWHITELIST = "url_white";
     public final static String INTERCEPTPLUGININVOKE = "intercept_plugin_invoke";
     private SharedPreferences preferences = null;
 
@@ -47,7 +46,6 @@ public class SecuritySDKInit {
             preferences.edit().putLong(TIMEOUT, sdkConfig.getTimeout());
             preferences.edit().putString(WEBVIEWCONFIG, JSON.toJSONString(sdkConfig.getWebviewConfig()));
             preferences.edit().putString(INTENTURISCHEMELIST, JSON.toJSONString(sdkConfig.getIntentUriList()));
-            preferences.edit().putString(URLWHITELIST, JSON.toJSONString(sdkConfig.getUpdateAndDownloadUrlWhiteList()));
             preferences.edit().putString(INTERCEPTPLUGININVOKE, JSON.toJSONString(sdkConfig.getInterceptPluginInvokeList()));
         }
         //执行定期更新任务查询

@@ -19,7 +19,6 @@ public class SecuritySDKConfig {
     private long timeout = 3600;                                            //下次更新间隔时间
     private WebviewConfig webviewConfig = null;                             //webview的拦截规则
     private List<IntentUriScheme> intentUriList = null;                     //intent uri拦截规则
-    private List<String> updateAndDownloadUrlWhiteList = null;              //应用和插件更新的url白名单
     private List<InterceptPluginInvoke> interceptPluginInvokeList = null;   //应用插件调用的过滤拦截规则
 
 
@@ -80,15 +79,6 @@ public class SecuritySDKConfig {
     }
 
 
-    public List<String> getUpdateAndDownloadUrlWhiteList() {
-        /*String str = preferences.getString(SecuritySDKInit.URLWHITELIST, null);
-        if(str != null){
-            updateAndDownloadUrlWhiteList = JSON.parseArray(str, String.class);
-        }*/
-        return updateAndDownloadUrlWhiteList;
-    }
-
-
     public List<InterceptPluginInvoke> getInterceptPluginInvokeList() {
         /*String str = preferences.getString(SecuritySDKInit.INTERCEPTPLUGININVOKE, null);
         if(str != null){
@@ -103,10 +93,6 @@ public class SecuritySDKConfig {
 
     public void setIntentUriList(List<IntentUriScheme> intentUriList) {
         this.intentUriList = intentUriList;
-    }
-
-    public void setUpdateAndDownloadUrlWhiteList(List<String> updateAndDownloadUrlWhiteList) {
-        this.updateAndDownloadUrlWhiteList = updateAndDownloadUrlWhiteList;
     }
 
     public void setInterceptPluginInvokeList(List<InterceptPluginInvoke> interceptPluginInvokeList) {

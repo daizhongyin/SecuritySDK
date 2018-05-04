@@ -10,8 +10,8 @@ import java.util.List;
 public class WebviewConfig {
 
     private List<String> urlWhiteList = null;               //webview中url白名单列表
-    private List<String> urlBlackList = null;               //url黑名单列表
-    private List<InterceptMethod> methodList = null;          //需要拦截的方法的结合
+    /*private List<String> urlBlackList = null;               //url黑名单列表
+    private List<InterceptMethod> methodList = null;          //需要拦截的方法的结合*/
 
     public List<String> getUrlWhiteList() {
         return urlWhiteList;
@@ -21,7 +21,7 @@ public class WebviewConfig {
         this.urlWhiteList = urlWhiteList;
     }
 
-    public List<String> getUrlBlackList() {
+   /* public List<String> getUrlBlackList() {
         return urlBlackList;
     }
 
@@ -35,5 +35,5 @@ public class WebviewConfig {
 
     public void setMethodList(List<InterceptMethod> methodList) {
         this.methodList = methodList;
-    }
+    }*/
 }
