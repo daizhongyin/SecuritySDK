@@ -3,7 +3,7 @@
 
 **SecuritySDK**是为Android APP提供一系列安全防护功能，包括但不限于：基础加固对抗防护、典型漏洞防护方案和代码、威胁情报收集等功能。其中securitysdkcore是项目核心功能代码，app只是securitysdkcore的测试demo apk。项目成员：daizy(daizhongyin@126.com)、张林(97615274@qq.com)、唐海洋(ffthy@qq.com)。如有任何问题，欢迎随时联系我们。
 
-**典型漏洞防护方案和代码**包括：安全webview、应用IPC通信安全、应用和插件更新安全、插件调用安全、ZIPFile读取APK文件的安全性、Intent Uri Scheme安全、插件plugin调用安全。
+**典型漏洞防护方案和代码**包括：安全webview、应用IPC通信安全、应用和插件更新安全、插件调用安全、ZIPFile读取压缩文件的安全性、Intent Uri Scheme安全、插件plugin调用安全、Jar签名效验验证。
 
 **基础加固对抗防护**包括：反调试、模拟器检测、重打包检测、进程注入检测、HOOK框架检测。
 
@@ -11,7 +11,7 @@
 
 ## SecuritySDK的配置文件设置与使用
 
- 由于漏洞防护中的很多能力依赖于运行时拦截，所以**配置文件**的更新和获取是SecuritySDK的使用前提，配置文件格式和内容，可以参考./securitysdkcore/config.json，配置文件由server端生成，SecuritySDK获取到本地后，反序列化后使用。
+ 由于漏洞防护中的很多能力依赖于运行时拦截，所以**配置文件**的更新和获取是SecuritySDK的使用前提，配置文件格式和内容，可以参考[示例](./securitysdkcore/config.json)，配置文件由server端生成，SecuritySDK获取到本地后，反序列化后使用。
 
  1）配置文件config.json(通过preferences方式存储)，是基于json格式的内容，它提供了4类拦截规则：webview的拦截规则、intent uri拦截规则、应用插件调用的过滤拦截规则。
 
@@ -26,29 +26,33 @@
 
 ## 典型漏洞防护方案、代码和使用说明
 
-* [安全webview](./docs/safewebview.md)
+* [安全webview](./docs/safewebview.md)——[代码](./securitysdkcore/src/main/java/com/nstl/securitysdkcore/webview/SafeWebView.java)
 
     安全webview是针对webview常见的远程命令执行漏洞，file域攻击、高危接口对外和中间人劫持，这几个高危漏洞设计的安全webview，可以有效的解决上述几个高危漏洞。同时参考了微信、支付宝和github上的开源代码(JSBridge)，做到了有效性、兼容性和安全性并存。
 
-* [应用IPC通信安全](./docs/BinderSecurityUtil.md)
+* [应用IPC通信安全](./docs/BinderSecurityUtil.md)——[代码](./securitysdkcore/src/main/java/com/nstl/securitysdkcore/BinderSecurityUtil.java)
 
     IPC通信安全是针对应用进程间，进行数据通信时设计的方案。应用A和应用B进行数据通信时，业务方需要使用Binder异步接口进行，不要使用开放端口，然后再每个开放的Binder通信接口中，调用BinderSecurityUtil. checkClientSig()进行调用方的签名认证，签名认证可以在本地，也可以在云端进行。
 
-* [应用和插件安全更新](./docs/safeupgrade.md)
+* [应用和插件安全更新](./docs/safeupgrade.md)——[代码](./securitysdkcore/src/main/java/com/nstl/securitysdkcore/UpgradeTool/UpgradeTool.java)
 
     应用和插件安全更新功能提供：应用和插件安全更新的能力，防止应用或插件更新升级时，被劫持或者下载的apk/zip被串改，从而导致任意代码执行的漏洞。
 
-* [ZIPFile读取APK文件安全](./docs/SafeZipFile.md)
+* [ZIPFile读取APK文件安全](./docs/SafeZipFile.md)——[代码](./securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/SafeZipFile.java)
 
-    为了保证ZIPFile读取APK文件的安全性，确保只有一个Dex(避免恶意代码加载执行漏洞)，此外还需要确保APK中的签名和业务方提供的签名信息一致，防止签名绕过漏洞。
+    为了保证ZIPFile读取APK文件的安全性，确保ZipFile文件内不包含../，并且只有一个Dex(避免恶意代码加载执行漏洞)，此外还需要确保APK中的签名和业务方提供的签名信息一致，防止签名绕过漏洞。
 
-* [Intent Uri Scheme安全](./docs/IntentUriSchemeFilter.md)
+* [Intent Uri Scheme安全](./docs/IntentUriSchemeFilter.md)——[代码](./securitysdkcore/src/main/java/com/nstl/securitysdkcore/urischeme/IntentUriSchemeFilter.java)
 
     Uri scheme类似 bainuo://web?url=http://aaa.bbb.com/xxx，其中参数容易被攻击者篡改以达到某种目的，为此，安全sdk定义IntentUriSchemeFilter类来提供Uri Scheme安全拦截的功能，作为临时补丁和恶意行为的拦截，类似web安全中的WAF。
 
-* [插件plugin调用安全](./docs/PluginInvokeValidate.md)
+* [插件plugin调用安全](./docs/PluginInvokeValidate.md)——[代码](./securitysdkcore/src/main/java/com/nstl/securitysdkcore/PluginInvokeValidate.java)
 
     插件调用安全是通过增加拦截类，根据配置文件(config)中的拦截规则，对恶意插件调用进行拦截；拦截规则提供了插件包名拦截、插件方法名拦截、调用的类名、方法参数和Intent数据的拦截.
+
+* [jar签名效验](./docs/jarSignatureVerify.md)——[代码](./securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/JarSignatureVerifier.java)
+
+    JarSignatureVerifier类是为了保证JAR签名和内容一致性，防止攻击者合法签名文件，但是.class文件和签名信息不一致，从而绕过签名校验，导致任意代码执行。
 
 ## 基础加固对抗防护
 

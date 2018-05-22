@@ -1,295 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="114659c9-5202-4512-bd9e-cc11efacbc2e" name="Default" comment="更新README.md文档，完善各个模块的功能介绍和使用。其中securitysdkcore是安全sdk的核心代码实现，app是安全sdk的测试demo apk。">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/BinderSecurityUtil.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/IntentUriSchemeFilter.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/PluginInvokeValidate.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/SafeZipFile.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/safeupgrade.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/safewebview.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/urischeme/IValidateIntentUriScheme.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/urischeme/IntentUriSchemeFilter.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/.ninja_deps" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/.ninja_log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/native-lib.dir/src/main/cpp/BasicInfor.cpp.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/native-lib.dir/src/main/cpp/InjectDetected.cpp.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/native-lib.dir/src/main/cpp/SimulatorDetected.cpp.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/native-lib.dir/src/main/cpp/Util.cpp.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/native-lib.dir/src/main/cpp/getSign.cpp.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/jarAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/jarAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskJars.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/feature_tests.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/feature_tests.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/CMakeFiles/feature_tests.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/CMakeFiles/feature_tests.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/CMakeFiles/feature_tests.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/feature_tests.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/feature_tests.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/feature_tests.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/feature_tests.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/CMakeFiles/feature_tests.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/CMakeFiles/feature_tests.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/CMakeFiles/feature_tests.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_C.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/3.6.0-rc2/CMakeDetermineCompilerABI_CXX.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/feature_tests.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_runtime_1_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_runtime_1_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_animated_vector_drawable_26_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_animated_vector_drawable_26_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_appcompat_v7_26_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_appcompat_v7_26_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_constraint_constraint_layout_1_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_constraint_constraint_layout_1_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_constraint_constraint_layout_solver_1_0_2_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_constraint_constraint_layout_solver_1_0_2_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_compat_26_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_compat_26_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_ui_26_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_ui_26_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_utils_26_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_utils_26_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_fragment_26_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_fragment_26_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_media_compat_26_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_media_compat_26_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_v4_26_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_v4_26_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_vector_drawable_26_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_vector_drawable_26_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_espresso_espresso_core_2_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_espresso_espresso_core_2_2_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_espresso_espresso_idling_resource_2_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_espresso_espresso_idling_resource_2_2_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_exposed_instrumentation_api_publish_0_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_exposed_instrumentation_api_publish_0_5.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_rules_0_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_rules_0_5.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_runner_0_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_runner_0_5.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_github_lzyzsd_jsbridge_1_0_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_github_lzyzsd_jsbridge_1_0_4.xml" />
+    <list default="true" id="114659c9-5202-4512-bd9e-cc11efacbc2e" name="Default" comment="1.修改SafeZipfile，增加&quot;目录穿越漏洞防护&quot;，2.增加jar签名效验，3.更新README.md文档">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/jarSignatureVerify.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/JarSignatureVerifier.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeCache.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/android_gradle_build.json" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/build.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/build.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/cmake_build_command.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/cmake_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/cmake_build_output.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/cmake_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/cmake_install.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/rules.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/arm64-v8a/rules.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeCache.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/android_gradle_build.json" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/build.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/build.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/cmake_build_command.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/cmake_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/cmake_build_output.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/cmake_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/cmake_install.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/rules.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi-v7a/rules.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/CMakeCache.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/android_gradle_build.json" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/build.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/build.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/cmake_build_command.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/cmake_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/cmake_build_output.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/cmake_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/cmake_install.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/rules.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/armeabi/rules.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/CMakeCache.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/android_gradle_build.json" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/build.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/build.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/cmake_build_command.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/cmake_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/cmake_build_output.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/cmake_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/cmake_install.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/rules.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips/rules.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/CMakeCache.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/android_gradle_build.json" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/build.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/build.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/cmake_build_command.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/cmake_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/cmake_build_output.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/cmake_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/cmake_install.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/rules.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/mips64/rules.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/CMakeCache.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/android_gradle_build.json" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/build.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/build.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/cmake_build_command.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/cmake_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/cmake_build_output.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/cmake_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/cmake_install.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/rules.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86/rules.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeCache.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/android_gradle_build.json" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/build.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/build.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/cmake_build_command.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/cmake_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/cmake_build_output.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/cmake_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/cmake_install.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/rules.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/debug/x86_64/rules.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/CMakeCache.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/android_gradle_build.json" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/build.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/build.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/cmake_build_command.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/cmake_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/cmake_build_output.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/cmake_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/cmake_install.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/rules.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/arm64-v8a/rules.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeCache.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/android_gradle_build.json" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/build.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/build.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/cmake_build_command.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/cmake_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/cmake_build_output.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/cmake_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/cmake_install.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/rules.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi-v7a/rules.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/CMakeCache.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/android_gradle_build.json" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/build.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/build.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/cmake_build_command.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/cmake_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/cmake_build_output.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/cmake_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/cmake_install.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/rules.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/armeabi/rules.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/CMakeCache.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/android_gradle_build.json" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/build.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/build.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/cmake_build_command.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/cmake_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/cmake_build_output.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/cmake_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/cmake_install.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/rules.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips/rules.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/CMakeCache.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/android_gradle_build.json" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/build.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/build.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/cmake_build_command.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/cmake_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/cmake_build_output.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/cmake_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/cmake_install.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/rules.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/mips64/rules.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/CMakeCache.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/android_gradle_build.json" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/build.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/build.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/cmake_build_command.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/cmake_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/cmake_build_output.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/cmake_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/cmake_install.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/rules.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86/rules.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/CMakeCache.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/android_gradle_build.json" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/build.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/build.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/cmake_build_command.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/cmake_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/cmake_build_output.txt" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/cmake_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/cmake_install.cmake" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/rules.ninja" afterPath="$PROJECT_DIR$/securitysdkcore/.externalNativeBuild/cmake/release/x86_64/rules.ninja" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/securitysdkcore.iml" afterPath="$PROJECT_DIR$/securitysdkcore/securitysdkcore.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/APPThreatIntelligence.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/APPThreatIntelligence.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/BinderSecurityUtil.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/BinderSecurityUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/HelpUtil.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/HelpUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/HttpUtil.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/HttpUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/NativeCoreUtil.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/NativeCoreUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/PluginInvokeValidate.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/PluginInvokeValidate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/SecuritySDKInit.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/SecuritySDKInit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/UpgradeTool/DataBean.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/UpgradeTool/DataBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/UpgradeTool/ISafeInstall.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/UpgradeTool/ISafeInstall.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/UpgradeTool/UpgradeModel.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/UpgradeTool/UpgradeModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/UpgradeTool/UpgradeTool.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/UpgradeTool/UpgradeTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/UpgradeTool/UpgradeToolTest/SafeInstall.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/UpgradeTool/UpgradeToolTest/SafeInstall.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/UpgradeTool/UserConfig.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/UpgradeTool/UserConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/Util/VerifyUtil.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/Util/VerifyUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/config/ConfigFileToObject.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/config/ConfigFileToObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/config/IntentUriScheme.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/config/IntentUriScheme.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/config/InterceptMethod.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/config/InterceptMethod.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/config/InterceptPluginInvoke.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/config/InterceptPluginInvoke.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/config/SecuritySDKConfig.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/config/SecuritySDKConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/config/WebviewConfig.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/config/WebviewConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/crypt/CryptAndHttps.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/crypt/CryptAndHttps.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/crypt/bean/EncryptData.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/crypt/bean/EncryptData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/DetectRootUtil.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/DetectRootUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/IVerifyListener.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/IVerifyListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/SafeZipFile.md" afterPath="$PROJECT_DIR$/docs/SafeZipFile.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/SafeZipFile.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/SafeZipFile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/bean/InstallPackageInfo.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/bean/InstallPackageInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/webview/IMethodInvokeInterface.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/webview/IMethodInvokeInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/webview/SafeWebView.java" afterPath="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/webview/SafeWebView.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -313,12 +32,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="218">
-                <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="902">
+                <caret line="63" column="17" lean-forward="true" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -326,21 +45,117 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VerifyUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/Util/VerifyUtil.java">
+      <file leaf-file-name="PluginInvokeValidate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/PluginInvokeValidate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-198">
-              <caret line="29" column="43" lean-forward="false" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+            <state relative-caret-position="144">
+              <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Util.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/cpp/Util.cpp">
+      <file leaf-file-name="IntentUriSchemeFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/urischeme/IntentUriSchemeFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            <state relative-caret-position="162">
+              <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpgradeTool.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/UpgradeTool/UpgradeTool.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JarSignatureVerifier.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/JarSignatureVerifier.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BinderSecurityUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/BinderSecurityUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IVerifyListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/IVerifyListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InstallPackageInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/bean/InstallPackageInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#837#838#0" expanded="false" />
+                <element signature="e#867#868#0" expanded="false" />
+                <element signature="e#913#914#0" expanded="false" />
+                <element signature="e#951#952#0" expanded="false" />
+                <element signature="e#984#985#0" expanded="false" />
+                <element signature="e#1013#1014#0" expanded="false" />
+                <element signature="e#1057#1058#0" expanded="false" />
+                <element signature="e#1093#1094#0" expanded="false" />
+                <element signature="e#1128#1129#0" expanded="false" />
+                <element signature="e#1162#1163#0" expanded="false" />
+                <element signature="e#1209#1210#0" expanded="false" />
+                <element signature="e#1251#1252#0" expanded="false" />
+                <element signature="e#1289#1290#0" expanded="false" />
+                <element signature="e#1323#1324#0" expanded="false" />
+                <element signature="e#1377#1378#0" expanded="false" />
+                <element signature="e#1423#1424#0" expanded="false" />
+                <element signature="e#1475#1476#0" expanded="false" />
+                <element signature="e#1513#1514#0" expanded="false" />
+                <element signature="e#1687#1688#0" expanded="false" />
+                <element signature="e#1723#1724#0" expanded="false" />
+                <element signature="e#1885#1886#0" expanded="false" />
+                <element signature="e#1920#1921#0" expanded="false" />
+                <element signature="e#1983#1984#0" expanded="false" />
+                <element signature="e#2031#2032#0" expanded="false" />
+                <element signature="e#2075#2076#0" expanded="false" />
+                <element signature="e#2107#2108#0" expanded="false" />
+                <element signature="e#2165#2166#0" expanded="false" />
+                <element signature="e#2207#2208#0" expanded="false" />
+                <element signature="e#2248#2249#0" expanded="false" />
+                <element signature="e#2287#2288#0" expanded="false" />
+                <element signature="e#2444#2445#0" expanded="false" />
+                <element signature="e#2481#2482#0" expanded="false" />
+                <element signature="e#2539#2540#0" expanded="false" />
+                <element signature="e#2591#2592#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DetectRootUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/DetectRootUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="517">
+              <caret line="93" column="18" lean-forward="false" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -349,6 +164,7 @@
     </leaf>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -2979,14 +2795,19 @@
         <option value="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/HttpUtil.java" />
         <option value="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/SafeZipFile.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/nstl/securitysdk/MainActivity.java" />
+        <option value="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/SafeZipFile.java" />
+        <option value="$PROJECT_DIR$/docs/SafeZipFile.md" />
+        <option value="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/JarSignatureVerifier.java" />
+        <option value="$PROJECT_DIR$/docs/jarSignatureVerify.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="1615" />
-    <option name="height" value="1054" />
+    <option name="x" value="64" />
+    <option name="y" value="-11" />
+    <option name="width" value="1617" />
+    <option name="height" value="1062" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -3004,10 +2825,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -3134,12 +2951,98 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Util" />
+              <option name="myItemId" value="urischeme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecuritySDK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecuritySDK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="securitysdkcore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="securitysdkcore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UpgradeTool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecuritySDK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecuritySDK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="securitysdkcore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="securitysdkcore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reinforce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecuritySDK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecuritySDK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3152,9 +3055,125 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs" />
+      <recent name="$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce" />
       <recent name="$PROJECT_DIR$/securitysdkcore/src/main/java" />
       <recent name="$PROJECT_DIR$" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/Logger/LogLevel.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/Logger/Logger.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/Logger/SecuritySdkError.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/Logger/SecuritySdkTrace.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/Logger/Track.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -3215,7 +3234,7 @@
       <option name="ACTIVITY_CLASS" value="com.nstl.securitysdk.MainActivity" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1525450421960" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527005888544" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -3288,7 +3307,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1525450421961" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527005888545" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -3336,7 +3355,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1525450421961" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527005888545" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3519,7 +3538,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1525450421965" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527005888548" />
       </method>
     </configuration>
     <list size="2">
@@ -3561,22 +3580,30 @@
       <option name="presentableId" value="Default" />
       <updated>1524234027296</updated>
     </task>
+    <task id="LOCAL-00001" summary="更新README.md文档，完善各个模块的功能介绍和使用。其中securitysdkcore是安全sdk的核心代码实现，app是安全sdk的测试demo apk。">
+      <created>1525450436774</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1525450436774</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1615" height="1054" extended-state="6" />
+    <frame x="64" y="-11" width="1617" height="1062" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3288889" sideWeight="0.48693436" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.48438495" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3288889" sideWeight="0.51306564" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33" sideWeight="0.5022307" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33" sideWeight="0.49776927" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -3604,42 +3631,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="更新README.md文档，完善各个模块的功能介绍和使用。其中securitysdkcore是安全sdk的核心代码实现，app是安全sdk的测试demo apk。" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新README.md文档，完善各个模块的功能介绍和使用。其中securitysdkcore是安全sdk的核心代码实现，app是安全sdk的测试demo apk。" />
+    <MESSAGE value="1.修改SafeZipfile，增加&quot;目录穿越漏洞防护&quot;，2.增加jar签名效验，3.更新README.md文档" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.修改SafeZipfile，增加&quot;目录穿越漏洞防护&quot;，2.增加jar签名效验，3.更新README.md文档" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/HelpUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/HttpUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/NativeCoreUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/config/SecuritySDKConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3647,7 +3650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3655,7 +3657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
           <caret line="60" column="11" lean-forward="false" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3695,7 +3696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3746,7 +3746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2352">
           <caret line="356" column="12" lean-forward="false" selection-start-line="356" selection-start-column="12" selection-end-line="356" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3754,7 +3753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3769,7 +3767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-450">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3777,7 +3774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-334">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3785,7 +3781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3793,22 +3788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-59">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/DetectRootUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2100">
-          <caret line="93" column="18" lean-forward="false" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/bean/InstallPackageInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1109">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -3816,7 +3795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="292" column="4" lean-forward="false" selection-start-line="292" selection-start-column="4" selection-end-line="292" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3824,15 +3802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1575">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/BinderSecurityUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3840,14 +3809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/IVerifyListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -3878,19 +3839,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/SafeZipFile.java" />
-    <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/UpgradeTool/UpgradeTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="60" column="11" lean-forward="false" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/UpgradeTool/UpgradeModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3898,18 +3850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/SafeZipFile.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -3923,7 +3863,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/Util/VerifyUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198">
+        <state relative-caret-position="288">
           <caret line="29" column="43" lean-forward="false" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
           <folding />
         </state>
@@ -3931,20 +3871,199 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/cpp/Util.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        <state relative-caret-position="360">
+          <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/IVerifyListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/bean/InstallPackageInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#837#838#0" expanded="false" />
+            <element signature="e#867#868#0" expanded="false" />
+            <element signature="e#913#914#0" expanded="false" />
+            <element signature="e#951#952#0" expanded="false" />
+            <element signature="e#984#985#0" expanded="false" />
+            <element signature="e#1013#1014#0" expanded="false" />
+            <element signature="e#1057#1058#0" expanded="false" />
+            <element signature="e#1093#1094#0" expanded="false" />
+            <element signature="e#1128#1129#0" expanded="false" />
+            <element signature="e#1162#1163#0" expanded="false" />
+            <element signature="e#1209#1210#0" expanded="false" />
+            <element signature="e#1251#1252#0" expanded="false" />
+            <element signature="e#1289#1290#0" expanded="false" />
+            <element signature="e#1323#1324#0" expanded="false" />
+            <element signature="e#1377#1378#0" expanded="false" />
+            <element signature="e#1423#1424#0" expanded="false" />
+            <element signature="e#1475#1476#0" expanded="false" />
+            <element signature="e#1513#1514#0" expanded="false" />
+            <element signature="e#1687#1688#0" expanded="false" />
+            <element signature="e#1723#1724#0" expanded="false" />
+            <element signature="e#1885#1886#0" expanded="false" />
+            <element signature="e#1920#1921#0" expanded="false" />
+            <element signature="e#1983#1984#0" expanded="false" />
+            <element signature="e#2031#2032#0" expanded="false" />
+            <element signature="e#2075#2076#0" expanded="false" />
+            <element signature="e#2107#2108#0" expanded="false" />
+            <element signature="e#2165#2166#0" expanded="false" />
+            <element signature="e#2207#2208#0" expanded="false" />
+            <element signature="e#2248#2249#0" expanded="false" />
+            <element signature="e#2287#2288#0" expanded="false" />
+            <element signature="e#2444#2445#0" expanded="false" />
+            <element signature="e#2481#2482#0" expanded="false" />
+            <element signature="e#2539#2540#0" expanded="false" />
+            <element signature="e#2591#2592#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/IntentUriSchemeFilter.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/SafeZipFile.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="18">
+            <caret line="1" column="103" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="103" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/PluginInvokeValidate.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/jarSignatureVerify.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="18">
+            <caret line="1" column="87" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="87" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/DetectRootUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="93" column="18" lean-forward="false" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/safewebview.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="108">
+            <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/webview/SafeWebView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/BinderSecurityUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/UpgradeTool/UpgradeTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/SafeZipFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/urischeme/IntentUriSchemeFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/PluginInvokeValidate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="218">
-            <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="902">
+            <caret line="63" column="17" lean-forward="true" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/securitysdkcore/src/main/java/com/nstl/securitysdkcore/reinforce/JarSignatureVerifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
